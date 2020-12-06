@@ -9,6 +9,7 @@
 \usepackage{cite}
 \usepackage{authblk}
 \usepackage{xcolor}
+\usepackage{braket}
 \newif{\ifmover}
 \newif{\ifquitar}
 \renewcommand{\Affilfont}{\small}
@@ -47,19 +48,19 @@ omnidirectional 1-D photonic structures}
 
 \begin{abstract}
 Porous silicon (PS) is a very versatile material for developing optical
-devices based on multilayer structures, since high and low porosity layers
-can be synthesized by simple electrochemical technique. We report the
-maximization of average reflectance (R$_{\text{prom}}\left(\lambda,\theta%
-\right)$) with minimum possible thickness of PS-based mirrors with different
-porosity contrasts. Optimization is performed in two regions (Visible and
-NIR) of the electromagnetic spectrum. We employ two techniques to design the
-mirrors: \textit{chirped} structures and the \textit{stacking} of sub-mirrors. The
-chirped structures were found to be relatively more suitable for obtaining
-highly reflectivity in the visible range, while the second type of
-structure was more effective for obtaining high reflectivity in the IR
-region. Some of the optimized omnidirectional structures with less than 100
-periods have been designed and experimentally demonstrated in a wide
-spectral range.
+devices based on multilayered structures, since high and low porosity layers
+can be synthesized by a simple electrochemical technique. We
+maximize the reflectance ($\braket{R}$ \notaL{El promedio no depende
+  de lambda ni theta, y prom es castellano} averaged over a wide wavelength
+and angular range  of PS-based mirrors with different
+porosity contrasts searching for a minimum thickness. Optimization is
+performed in the visible (Vis) and near infrarred (NIR) regions of the
+electromagnetic spectrum. We design the mirrors using \textit{chirped}
+structures and \textit{stacking} sub-mirrors. The
+chirped structures were better suited for the Vis, and the stacked
+sub-mirrors for the NIR regions. We design, fabricate and test some
+optimized omnidirectional structures with less than 100
+periods.
 \end{abstract}
 
 \section{Introduction}
@@ -80,7 +81,7 @@ structures as they also provide design flexibility in terms of
 reflection wavelength. These properties are widely used to design various
 one-dimensional (1D) and two-dimensional (2D) PCs for its
 potential applications in optoelectronics, optical telecommunications and computing,
-laser technology \cite{Lopez2013,Masaya2010}, and radiative cooling applications
+laser technology \cite{Lopez2003,Masaya2010}, and radiative cooling applications
 \cite{Kumar2020}. The simplest 1D PC is composed of alternating high $\left(
 n_{H}\right) $ and low $\left(n_{L}\right) $ refractive index layers (Bragg Mirror,
 BM). The optical thicknesses are typically chosen to be quarter-wavelength length, $
@@ -107,7 +108,7 @@ nm. On the other hand, DeCorby et al., \cite{DeCorby2005} fabricated mirrors by
 coupling multiple layers of Ge$_{33}$As$_{12}$Se$_{55}$ chalcogenide glass and
 polyamide-imide polymer, deposited by thermal evaporation and spin-casting
 respectively, to obtain 150 nm wide omnidirectional band, centered at 1750 nm
-wavelength. Furthermore, Jena et al., \cite{Jena2016}
+wavelength. Furthermore, Jena et al., \cite{Jena2019}
 used sequential asymmetric bipolar pulsed DC magnetron sputtering (for TiO$%
 _{2}$ layers) and radio frequency magnetron sputtering (for SiO$_{2}$
 layers) to generate 1DPC of TiO$_{2}$/SiO$_{2}$ and achieved ODBM from
@@ -215,7 +216,7 @@ dispersion relation is analyzed.
 Some of the proposed photonic structures were synthesized through anodic
 etching of a (100) oriented, p-type Boron doped, crystalline Si wafer with
 resistivity 0.002-0.005 $\Omega \cdot $cm, under galvanostatic conditions
-\cite{Canham90,Escorcia07}. Electrochemical anodization process was
+\cite{Canham1990,Escorcia2007}. Electrochemical anodization process was
 performed at room temperature, with an electrolyte of aqueous HF (48$\%$ of
 wt) and ethanol (99.9$\%$ of wt) in 1:1 volumetric proportion, respectively.
 With this electrolyte, the minimum and maximum porosities that can be
@@ -548,6 +549,9 @@ Tecnolog\'{i}a through grant No. \textbf{256243} and C\'{a}tedras
 Conacyt program 1577, and by DGAPA-PAPIIT UNAM under grant IN111119.
 %\end{acknowledgments}
 
+\bibliographystyle{unsrt}
+\bibliography{Bibliografia}
+\end{document}
 
 \begin{thebibliography}{99}
 \bibitem{Joannopoulos2008} J. D. Joannopoulos et al., Photonic Crystals:
@@ -557,8 +561,8 @@ Molding the Flow of Light, Princeton University Press, New Jersey (2008).
 for sensing applications,\ \textit{J. Nanophotonics }12(\textbf{4}), 040501
 (2018).
 
-\bibitem{Lopez2013} C. L\'{o}pez, Materials aspects of photonic crystals,
-\textit{Adv. Mater.} \textbf{15}, 1679--1704 (2013).
+\bibitem{Lopez2003} C. L\'{o}pez, Materials aspects of photonic crystals,
+\textit{Adv. Mater.} \textbf{15}, 1679--1704 (2003).
 
 \bibitem{Masaya2010} N. Masaya, Manipulating light with strongly modulated
 photonic crystals, \textit{Rep. Prog.Phys.} \textbf{73} 096501, (2010).
@@ -586,7 +590,7 @@ Phys. Lett}. \textbf{82} (2003) 2770--2772.
 Clement, Planar omnidirectional reflectors in chalcogenide glass and
 polymer, \textit{Opt. Express }13, 6228-6233 (2005)
 
-\bibitem{Jena2016} S. Jena, R.B. Tokas, S. Tripathi, K.D. Rao, D.V. Udupa,
+\bibitem{Jena2019} S. Jena, R.B. Tokas, S. Tripathi, K.D. Rao, D.V. Udupa,
 S. Thakur, N.K. Sahoo Influence of oxygen partial pressure on
 microstructure, optical properties, residual stress and laser induced damage
 threshold of amorphous HfO2 thin films \textit{Journal of Alloys and
@@ -682,11 +686,11 @@ experimental and theoretical results. \textit{Optical Materials}, 28(5):506-513,
 \bibitem{minuit} James F. and Winkler M. Minuit user's guide. CERN, Geneva,
 (2004).
 
-\bibitem{Canham90} Canham L. T. Silicon quantum wire array fabrication by
+\bibitem{Canham1990} Canham L. T. Silicon quantum wire array fabrication by
 electrochemical and chemical dissolution of wafers. \textit{Appl. Phys. Lett.%
 }, 57(\textbf{10}):1046-1048, (1990).
 
-\bibitem{Escorcia07} Escorcia J. and Agarwal V. E ect of duty cycle and
+\bibitem{Escorcia2007} Escorcia J. and Agarwal V. E ect of duty cycle and
 frequency on the morphology of porous silicon formed by alternating square
 pulse anodic etching. \textit{Phys. Status Solidi (c)}, 4(\textbf{6}%
 ):2039-2043, (2007).
