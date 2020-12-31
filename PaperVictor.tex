@@ -21,8 +21,7 @@
 
 %\title{Thickness optimization in wide range quasi omnidirectional multilayer
 % structures}
-\title{ Thickness optimization in wide range quasi
-omnidirectional 1-D photonic structures}
+\title{Optimization of wide-band quasi-omnidirectional 1-D photonic structures}
 \author[1,2,3]{Victor Castillo-Gallardo\thanks{email: {\tt
 			victor1\_1@hotmail.com}}}
 \author[1,2,3]{Luis Eduardo Puente-D\'{i}az}
@@ -177,60 +176,73 @@ with significantly thinner structures. \notaL{Dejo para resultados y
   conclusiones los detalles de con quién comparamos y qué salió.}
 Finally, we discuss our conclusions in Section \ref{s:conc}.
 
-\section{Theoretical analysis}\label{s:theory}
+\section{Theory}\label{s:theory}
 
 \notaL{Pon etiquetas a todo para poderlo referir}
-In the analysis of the propagation of the electromagnetic field through
-multilayer systems, it is common to employ the transfer matrix method (put the
-reference). Under the consideration that the system only varies along the $z$ axis, the
-transfer matrix is $M\left(z_{2},z_{1}\right)$
-a 2x2 matrix that relates the components of the electric field E$_{\parallel }$
-and the magnetic field H$_{\parallel }$ parallel to the $xy$ plane, and
-normal to the axis of the structure, evaluated at any two points $z_{2}$
-and $z_{1}$
+For the analysis of the propagation of electromagnetic fields through
+multilayer systems it is usual to employ the transfer matrix
+method\notaL{reference}. Assuming the system is 1D, with variations
+only along the $z$ directions, and that the polarization of light is either
+transverse electric (TE) or transverse magnetic (TM)\notaL{si no, la matriz
+  sería de 4x4}, the
+transfer matrix $M\left(z_{2},z_{1}\right)$ is
+a 2x2 matrix that relates the components of the electric $E_{\| }$
+and magnetic  $H_{\|}$ fields parallel to the $xy$ plane
+evaluated at $z_2$ to their value at $z_{1}$,
 \begin{equation*}
 \left(
 \begin{array}{c}
-E_{\Vert } \\
-H_{\Vert }%
+E_{\|} \\
+H_{\| }%
 \end{array}%
 \right) _{z_{2}}=M\left( z_{2},z_{1}\right) \left(
 \begin{array}{c}
-E_{\Vert } \\
-H_{\Vert }%
+E_{\| } \\
+H_{\| }%
 \end{array}%
 \right) _{z_{1}}.
 \end{equation*}%
-Many equivalent formulations have been proposed to obtain $M$
+Many equivalent formulations have been proposed to obtain and use $M$
 \cite{Mochan1987,Ortiz2020,Chavez2020}. Here we use a recently developed formalism
-to calculate the reflectance of large multilayer systems proposed by Puente-D%
-\'{\i}az, et al. \cite{Puente2020}, since we need a reliable and stable tool
-to design an optimized structure through a minimization procedure that
-requires the calculation of complete spectra for all sets of design parameters.
-The development of $M$ is shown in the supplementary information. Therefore, the
+for the numerically stable calculation of the reflectance of large
+multilayer systems, as
+proposed by Puente-Díaaz, et al. \cite{Puente2020}, summarized in the
+supplementary information. The
 explicit expressions for the optical coefficients are:
 \begin{equation}
-r=\mp \frac{Z_{0}\tilde{M}_{11}+\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}_{21}-Z_{s}%
-\tilde{M}_{22}}{Z_{0}\tilde{M}_{11}-\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}%
-_{21}+Z_{s}\tilde{M}_{22}},  \label{rBloch}
+r=\mp \frac{Z_{0}M_{11}+M_{12}-Z_{0}Z_{s}M_{21}-Z_s
+M_{22}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{rBloch}
 \end{equation}%
 and
 \begin{equation}
-t=\frac{2Z_{\alpha }}{Z_{0}\tilde{M}_{11}-\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}%
-_{21}+Z_{s}\tilde{M}_{22}},  \label{tBloch}
+t=\frac{2Z_{\alpha
+  }}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
 \end{equation}%
-where the upper sign $-$ in Eq. (\ref{rBloch}) and the subscript $\alpha =s$
+where $M_{ij}$ \notaL{Quité las tildes, pues hubiera sido necesario
+  explicarlas, y no creo que sean importantes para el lector} are the elements
+of the transfer matrix which transfer
+the fields from its surface interface with vacuum at $z_0$ towards the
+substrate at $z_s$,  $Z_0$ is the surface impedance of vacuum and $Z_s$ is the
+surface impedance of the substrate, and we define $r=F_r/F_i$ and $t=F_t/F_i$ in terms
+of the reflected and transmitted fields, where we choose the $F$'s as electric
+fields for (TE) polarization and magnetic fields
+for transverse magnetic polarization (TM). The upper sign $-$ in
+Eq. (\ref{rBloch}) and the subscript $\alpha =s$
 in Eq. (\ref{tBloch}) are chosen for the case of TE polarization, while
 the lower sign $+$ and the subscript $\alpha =0$ correspond to TM
-polarization, respectively. Furthermore, $\tilde{M}_{ij}$ are the elements of the transfer matrix. As usual, the reflectance is given by $R=|r|^{2}$ and the
+polarization, respectively.
+The reflectance is given by
+$R=|r|^{2}$ and the
 transmittance by $T=\beta \left\vert t\right\vert ^{2}$ with $\beta
-=Z_{0}/Z_{s}$ for the case of TE polarization and $\beta =Z_{s}/Z_{0}$ for
-the case of TM polarization. Additionally, complex refractive indices of the porous
-layers in the simulations were obtained by Bruggeman effective medium theory, which
+=\text{Re}Z_{0}/\text{Re}Z_{s}$ for TE polarization and $\beta =\text{Re}Z_{s}/\text{Re}Z_{0}$ for
+TM polarization.\notaL{En el cálculo, ¿tomaste las partes reales? No
+  estaban en la fórmula} The complex refractive index of the porous
+layers were obtained through the Bruggeman's effective medium theory, which
 has been reported to adequately reproduce the PS optical parameters
 \cite{Giusseppe2011,Pap2006,Estrada2018}.
 
-After the next section, two techniques are developed to design multilayer
+\notaL{Creo que esto debería estar más adelante:
+  After the next section, two techniques are developed to design multilayer
 photonic structures. In the first, the wavelength ($\lambda _{j}$), at which
 the $j$-th period of the structure is designed, is modulated by an
 increasing function. This can be as simple or complex as you like. The
@@ -239,6 +251,7 @@ Language) \cite{minuit}. The other technique for proposing highly reflective
 structures over a wide region of the electromagnetic spectrum is to stack
 sub-mirrors tuned to different wavelengths. For each sub-mirror the
 dispersion relation is analyzed.
+}
 
 \section{Experimental details}\label{s:exp}
 
