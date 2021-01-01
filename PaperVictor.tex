@@ -52,7 +52,7 @@ S.L.P., 78210, M\'{e}xico.}
 Porous silicon (PS) is a very versatile material for developing optical
 devices based on multilayered structures, since high and low porosity layers
 can be synthesized by a simple electrochemical technique. We
-maximize the reflectance ($\braket{R_{\text{ave}}}$ \notaL{El promedio no depende
+maximize the reflectance $\braket{R}$ \notaL{El promedio no depende
   de lambda ni theta, y prom es castellano}   of PS-based
 mirrors  averaged over a wide wavelength
 and angular range, for different
@@ -293,40 +293,44 @@ equipment accessory URA.
 
 \section{Results and discussion}\label{s:res}
 
-In this section we present compare the calculated and measured reflectance
-spectra at different incidence angles in the regions of interest. In the first
-subsection, the design and optimization of R$_{\text{ave}}$ of \textit{chirped}
-photonic structures is presented, and next subsection the design of the structure is
-analyzed through sub-mirrors stacks.
+In this section we presents optimized calculations of the reflectance
+of different multilayered omnidirectional wide-band mirrors and we
+compare the results to spectra taken from
+the corresponding samples at several angles of
+incidence. Sec. \ref{ss:chirped} is devoted to chirped-type Bragg
+mirrors while Sec. \ref{ss:stacked} is devoted to structures made of
+stacked sub-mirrors.
 
 \notaL{Quizás esto se pueda incluir por aquí.:
   After the next section, two techniques are developed to design multilayer
 photonic structures. In the first, the wavelength ($\lambda _{j}$), at which
 the $j$-th period of the structure is designed, is modulated by an
-increasing function. This can be as simple or complex as you like. The
+increasing function. This can be as simple or complex as you
+like. {\tiny The
 proposed function was optimized with the Minuit module of PDL (Perl Data
-Language) \cite{minuit}. The other technique for proposing highly reflective
+Language) \cite{minuit}.} The other technique for proposing highly reflective
 structures over a wide region of the electromagnetic spectrum is to stack
 sub-mirrors tuned to different wavelengths. For each sub-mirror the
 dispersion relation is analyzed.
 }
-\subsection{Chirped-type Bragg mirrors}
+\subsection{Chirped-type Bragg mirrors}\label{ss:chirped}
 
-The generic form of the expression that modulates the design of photonic
-structure is:
+Here we study multilayered structures where the thicknesses for each
+pair $j=0\ldots N_p$ of layers are tuned to a wavelength $\lambda_j$ which changes
+gradually with the depth of the layer, according to
 \begin{equation}
-\lambda_{j}=\lambda_{\min }+\left(\lambda_{\max }-\lambda_{\min}\right) f\left( x_{j}\right),\label{Dis}
+\lambda_{j}=\lambda_{\min }+\left(\lambda_{\max }-\lambda_{\min}\right) f(j/N_p)),\label{Dis}
 \end{equation}%
-where $\lambda_{\min }$, $\lambda_{\max }$ and $\lambda_{j}$ correspond
-to the minimum, maximum, and design wavelengths to which the $j$-th period
-is tuned, respectively, and $f\left( x_{j}\right) $ represents any
-normalized function that modulates the thickness. Here $x_{j}=\frac{j}{N_{p}}$ being
-$j$ the $j$-th period and $N_{p}$ the total number of periods that the structure
-will contain. Only restriction for $f\left( x_{j}\right) $ is that it has to be an
-increasing function, due to the high absorption of PS in the ultraviolet region
-which decreases in the visible and becomes negligible in the near infrared. So, the
-first periods are syntonized in the UV-Vis regions. This work shows the analysis
-of following functions:
+where $\lambda_{\min }$ and $\lambda_{\max }$ are the minimum and {\em
+  design} wavelengths respectively, $N_p$ is the index of the deepst
+pair of layers and $f(x)$ is some smooth function
+that goes from 0 to 1 as its argument goes from surface ($x=0$) to the
+substrate ($x=1)$. We only consider increasing functions $f$ due to
+the high absorption of PS in the ultraviolet region
+which decreases in the visible and becomes negligible in the near
+infrared, so, the
+first periods are syntonized in the UV-Vis regions. We consider the
+following classes of functions:
 \begin{equation}
 f_{1}\left( x\right) =x^{\alpha },  \label{F1}
 \end{equation}
@@ -339,69 +343,117 @@ and%
 f_{3}\left( x\right) =Ax^{\alpha }\left( 1-x\right) +x^{\beta },  \label{F3}
 \end{equation}
 where $\alpha$, $\beta$ and $A$ are parameters to optimize. The function
-$f_{1}$ (Eq. (\ref {F1})) represents the simplest profiles. The restrictions
-for the values $\alpha$ are that they must be positive and they must not be
-extremely large or small. In these cases, mirrors that reflect in
-$\lambda_{\text{min}}$ or $\lambda _{\text{max}}$, respectively, will be obtained. Eq.
-(\ref{F2}) is formed by the average of two functions of type $f_{1}$ with different
-powers. The function $f_{3}$ (Eq. (\ref{F3})) was designed so that the first and second
-additions predominate the short and long wavelengths, respectively. The
-R$_{\text{ave}}$ of the structures is calculated in
-the wavelength range from 350 to 1400 nm and from 0 to 90${{}^\circ}$ angle of
-incidence. The optimized parameters using a porosity contrast of $51/76\%$ are shown
-in Table 1 and in the supplementary information they appear for the porosity
-contrasts of $30/76\%$ and $42/76\%$.
+$f_{1}$ (Eq. (\ref {F1})) represents simple increasing profiles,
+restricting  $\alpha>0$. The functions $f_2$ are arithmetic averages
+of two functions of the type $f_{1}$ with different
+powers $\alpha$ and $beta$ \notaL{A ¿no debe ser 1/2 a fuerza, para
+  que $f_2(1)=1$?}. The functions $f_{3}$ (Eq. (\ref{F3})) are
+designed so that the power $\alpha$ dominates close to the surface and
+the power $\beta$ close to the substrate, to allow different behaviors
+at the UV and at the IR end of the spectrum. The reflectance
+$R(\lambda,\theta)$ of the resulting structures was calculated in
+the wavelength range from 350 to 1400 nm and for angles of incidence
+from normal ($0^\circ$)  to grazing ($90^\circ$) incidence and
+averaged to yield $\braket{R}$. The parameters $\alpha$, $\beta$
+and $\gamma$ were then optimized to maximize the average
+reflectance. The calculations were done using the Perl Data Language
+(PDL) and its interface to the MINUIT minimization
+package\cite{minuit}.The optimized parameters corresponding to a
+porosity contrast of
+51/76\% are shown
+in Table 1.  In the supplementary information we include the
+parameters for porosity contrasts of $30/76\%$ and $42/76\%$.
 \begin{table}
-\caption{ Design parameters obtained after the optimization of functions (Eqs.
-(\ref{F1}) - (\ref{F3})) for maximum average reflectance and minimum thickness }%
-\includegraphics[width=\textwidth]
-{F2TableOptimized.pdf}
+\includegraphics[width=\textwidth]{F2TableOptimized.pdf}
+\caption{Optimized parameters yielding the highest average reflectance
+  $\braket{R}$  for the profile classes $f_1$, $f_2$ and $f_3$ (Eqs.
+  (\ref{F1}) - (\ref{F3}))}
 \end{table}
+\notaL{Sugiero poner aquí una tabla de latex, editable, en lugar de
+  una figura}
+\notaL{No es claro en el texto cómo se obtiene $N_p$. Se mencionaba
+  una minimización del ancho, pero no recuerdo cómo se minimizó a la
+  vez que se maximizaba la reflectancia. ¿Fue minuit? ¿Fue a ojo?}
 
-According to the values shown in table I, the structure (named as ST-A) that has the
+According to table I, the structure (named as ST-A)\notaL{Este nombre
+  no está en la tabla. ¿Qué significa el acrónimo?} that has the
 maximum average reflectance with the minimum thickness is the one designed
-with the function $f_{3}$ (Eq. (\ref{F3})). Thus, the first and last periods
-are tuned to 320 and 1400 nm, respectively. The complete distribution of the
-periods is presented in Fig. \ref{Fig2}(a).
+with the function $f_{3}$ (Eq. (\ref{F3})) with parameters
+$\alpha=1.23$, $\beta=0.54$ and $A=0.18$, which is shown in
+Fig. \ref{Fig2}(a). \notaL{Si queremos que $x_j$ vaya de 0 a 1 habría
+  que numerar $j$ de 0 a $N_p-1$, y dividir entre $N_p-1$ en lugar de 1 a $N_p$ y
+  dividir entre $Np$. Parece que no lo hiciste así, entonces habría que
+  revisar un poco la discusión arriba}.
 \begin{figure}
 \begin{center}
-\includegraphics[width=\textwidth]
-{F3OptimizedVis.pdf}
+\includegraphics[width=\textwidth]{F3OptimizedVis.pdf}
 \end{center}
-\caption{(a) Distribution of $\protect\lambda_{j}$ in the $j$-th period for
-the design of the 63-period multilayer structure. (b) Mapping of the average
-reflectance of the structures designed with different values{}of $%
-\protect\alpha $ and $N_{p}$ parameters. It is verified that the parameters
-obtained during the optimization are adequate ($\protect\alpha =1.23$ and $%
-N_{p}=63$). (c) Mapping the calculated reflectance for non polarized light of the
-designed structure with the optimized values. (d) Comparison of reflectance spectra
-calculated and measured at different angles of incidence. The gray band indicates the
-region in which the reflectance is greater than 95\%. Inset shows the
-top view photograph of the synthesized structure.}
+\caption{(a)Design wavelength $\lambda_{j}$ vs. period number $j$-th
+  for the optimized structure ST-A with 63-periods.\notaL{Parece un
+    poster miniatura. ¿La ilustración a la derecha está a escala o
+    es esquemática? ¿La necesitamos? Está tan chica que es ilegible}
+  (b) Average reflectance of the structures designed with different
+  values of $\alpha$ and $N_{p}$.\notaL{Por qué en la misma figura?
+    ¿Cuál es el propósito de incluir esta? Cambia el cbrange para que
+    el color diga algo. Se ve todo rojo uniforme.} It is verified that the
+  parameters obtained during the optimization are adequate ($\alpha
+  =1.23$ and $N_{p}=63$).\notaL{Este comentario va en el texto, no en
+    el pie de figura} (c) Reflectance for non polarized light of the
+  optimized structure. (d) Comparison of the reflectance spectra
+  calculated and measured at different angles of incidence. The gray band indicates the
+  region in which the reflectance is greater than 95\%. Inset shows the
+  top view photograph of the synthesized structure.\notaL{En mi
+    humilde opinión son demasiadas figuras en una sola, no
+    claramente relacionadas entre sí.}}
 \label{Fig2}
 \end{figure}
-To verify that the values obtained are optimal, in Fig. \ref{Fig2}(b), the average
-reflectances of the photonic structures designed with different parameters are mapped
-and, indeed, the values are in the area where R$_{\text{ave}}$ is maximum. Here, the
+In Fig. \ref{Fig2}(b)
+we show $\braket{R}$ for different values of $N_p$ and
+$\alpha$ to illustrate its dependence on the parameters, and
+to verify that our optimized values correspond indeed to the maximum. Here, the
 parameters $\lambda_{\text{min}}$, $\lambda_{\text{max}}$, $\beta$ and $A$ were
 adjusted, while $N_{p}$ and $\alpha$ varied from 30 to 200 periods and from 0.4 to 1.3,
-respectively. The calculated reflectance, R$\left( \lambda ,\theta \right) $, of the
-photonic structure is shown in Fig \ref{Fig2}(c). Here, the wavelength and incidence
-angle cover the ranges from 350 to 1400 nm, and from 0${{}^\circ}$ to 90${{}^\circ}$,
-respectively. Calculations indicate that the structure has a localized omnidirectional
-band gap from 1000 to 1200 nm, taken with a reflectance greater than 95$\%$. Due to
-experimental limitations, reflectance spectra for non polarized light are shown in all results. In Fig. \ref{Fig2}(d), the calculated and measured reflectance is compared
-at 10${{}^\circ}$, 20${{}^\circ}$, 30${{}^\circ}$, 40${{}^\circ}$, 50${{}^\circ}$
-and 60${{}^\circ}$ of incidence. In this angular range, the structure has a
+respectively. \notaL{Ya no me quedó claro. Hay que decir arriba cuales
+  son los parámetros que se variaron durante la optimización original. ¿Fueron
+  $N_p$, $\lambda_{min}$, $\lambda_{\max}$, $A$, $\alpha$ y $beta$,
+  todos ellos? Creo que no es claro. Si fue así, hay que distinguir
+  las longitudes de onda del ajuste de las del rango en que
+  optimizaste la reflectancia}
+The calculated reflectance, $R(\lambda ,\theta)$ of the optimized
+photonic structure is shown in Fig \ref{Fig2}(c) for wavelengths and incidence
+angles covering the ranges from 350 to 1400 nm, and from $0^\circ$ to $90^\circ$,
+respectively. Calculations indicate that the structure is an omnidirectional
+mirror with a  reflectance $R>0.95$ within a band from 1000 to 1200
+nm. \notaL{La zona gris en la figura va más allá de 1200.} We
+fabricated a sample corresponding to our
+optimized structure and measured its reflectance spectra at several
+incidence angles $\theta$. Due to
+experimental limitations, we restrict our results to the case of
+non-polarized light.
+In Fig. \ref{Fig2}(d), the calculated and
+measured reflectance are compared
+for $\theta=10^\circ$, $20^\circ$, $30^\circ$, $40^\circ$, $50^\circ$
+and $60^\circ$. In this angular range, the structure has a
 quasi-omnidirectional band gap (R$\left(\lambda,\theta\right)>95\%$) located from
-980 to 1340 nm. The numerical and experimental spectral line shapes at different
-angles are in good agreement. For wavelengths greater than 700 nm and lying between
-10${{}^\circ}$ to 40${{}^\circ}$ of incidence angle, the difference in spectra is
-less than $5\%$. For angles of incidence greater than 40 degree, although their
-characteristics are similar, the measured spectrum demonstrates relatively less
-reflectance than calculated reflectance. This difference can be attributed, in part,
-to the scattering of light between each of the actual interfaces, which generally
-have some roughness \cite{Theiss1994,Chavez2020}.
+980 to 1340 nm. \notaL{Aquí hay un error: el experimento salió ¡mejor
+  que la teoría! (ver arriba) Algo hay mal en la descripción, pues la
+  figura muestra al experlimento abajo de la teoría.}  The
+numerical and experimental spectral line shapes at different
+angles are in good agreement. For $\lambda>700$nm and
+$10^\circ<\theta<40^\circ$ the spectra differs by
+less than $5\%$. For $\theta>40^\circ$ both spectra agree
+qualitatively but the measured reflectance is lower that than the
+calculated one. This difference can be attributed, in part,
+to the scattering of light at the actual interfaces, which generally
+have some roughness \cite{Theiss1994,Chavez2020} which we have not
+accounted for in our theory.\notaL{Quizás aquí puedas citar el
+  artículo de Guillermo Ortiz y mío reciente {\em Rough 1D  Photonic
+    Crystals: a transfer matrix approach}, Leandro Missoni, Guillermo
+  Ortiz, María Martinez Ricci, Victor Toranzos y W. Luis Mochan,
+  Optical Materials {\bf 109}, 110012 (2020)
+{\tt https://doi.org/10.1016/j.optmat.2020.110012}}
+
+\notaL{Aquí voy.}
 
 Due to the absorptive nature of Si in the UV and visible region, it is relatively
 difficult to design porous silicon omnidirectional mirrors in that region.
