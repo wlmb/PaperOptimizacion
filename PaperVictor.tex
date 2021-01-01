@@ -256,41 +256,60 @@ dispersion relation is analyzed.
 \section{Experimental details}\label{s:exp}
 
 Some of the proposed photonic structures were synthesized through anodic
-etching of a (100) oriented, p-type Boron doped, crystalline Si wafer with
+etching of a (100) oriented, $p$-type Boron doped, crystalline Si wafer with
 resistivity 0.002-0.005 $\Omega \cdot $cm, under galvanostatic conditions
-\cite{Canham1990,Escorcia2007}. Electrochemical anodization process was
-performed at room temperature, with an electrolyte of aqueous HF (48$\%$ of
+\cite{Canham1990,Escorcia2007}. The electrochemical anodization process was
+performed at room temperature, with an electrolyte of aqueous
+hydrofluoric acid (HF) (48$\%$ of
 wt) and ethanol (99.9$\%$ of wt) in 1:1 volumetric proportion, respectively.
 With this electrolyte, the minimum and maximum porosities that can be
-obtained are 35$\%$ and 76$\%$ (gravimetrically obtained), using current densities of 0.5 and 305 mA$/$%
-cm$^{2}$, respectively. However, it is not desirable to use very high
-porosity contrasts due to structure fragility and electrolyte diffusivity problems \cite{Ariza2011}.
-For this reason, the current
-densities were chosen as 35 and 305 mA$/$cm$^{2}$, with corresponding
-porosities of 51$\%$ and 76$\%$, respectively. The calibration curves were
-acquired through a gravimetric technique as follows: single layers of porous
-silicon were synthesized under similar conditions and were weighed ($m_{i}$)
+obtained are 35$\%$ and 76$\%$ \notaL{Creo que se puede quitar de
+  aquí, pues lo discutes abajo:(gravimetrically obtained)}, using
+current densities of 0.5 and $305\text{mA}/\text{cm}^{2}$,
+respectively. However, as it is not desirable to use very high
+porosity contrasts due to structure fragility and electrolyte
+diffusivity problems \cite{Ariza2011}, the current
+densities were chosen as 35 and $305\text{mA}/\text{cm}^{2}$, with
+corresponding
+porosities of 51\% and 76\%, respectively. The porosity was calibrated
+\notaL{Creo que no muestras curvas de calibración: calibration curves were
+acquired} through a gravimetric technique as follows: single layers of porous
+silicon were synthesized under similar conditions applying a constant
+current for a time \notaL{cuánto tiempo para la calibración?}  and were weighed to
+obtain their mass $m_i$
 before ($m_{1}$) and after ($m_{2}$) the electrochemical attack, and after
-dissolving the already formed porous silicon layer ($m_{3}$), to calculate
-the porosity as $p=(m_{1}-m_{2})/(m_{1}-m_{3})$ \cite{Pap2006}. Etching
-rate of PS was obtained by re-synthetizing individual layers under similar
-conditions and measuring their thicknesses through SEM (Scanning Electron
-Microscopy). The absolute reflectivity measurements were carried out
+dissolving the already formed porous silicon layer ($m_{3}$), to obtain
+the porosity as $p=(m_{1}-m_{2})/(m_{1}-m_{3})$ \cite{Pap2006}.
+The etching
+rate of PS was obtained by synthetizing single layers under similar
+conditions and measuring their thicknesses through Scanning Electron
+Microscopy (SEM). Absolute reflectivity measurements were carried out
 with a Perkin Elmer Lambda 950 UV/Visible spectrophotometer with a variable
-angle universal reflectance accessory (URA) for different incident angles $%
-\theta _{i}=10^{\circ }$, $20^{\circ }$, $30^{\circ }$, $40^{\circ }$, $%
-50^{\circ }$ and $60^{\circ }$ using non-polarized light. The maximum and
+angle universal reflectance accessory (URA) for different incident
+angles $\theta _{i}=10^{\circ }$, $20^{\circ }$, $30^{\circ }$,
+$40^{\circ }$, $50^{\circ }$ and $60^{\circ }$ using non-polarized light. The maximum and
 minimum values of $\theta _{i}$ were constrained by the angular range of the
 equipment accessory URA.
 
 \section{Results and discussion}\label{s:res}
 
-This section presents the comparison of the calculated and measured reflectance
+In this section we present compare the calculated and measured reflectance
 spectra at different incidence angles in the regions of interest. In the first
 subsection, the design and optimization of R$_{\text{ave}}$ of \textit{chirped}
 photonic structures is presented, and next subsection the design of the structure is
 analyzed through sub-mirrors stacks.
 
+\notaL{Quizás esto se pueda incluir por aquí.:
+  After the next section, two techniques are developed to design multilayer
+photonic structures. In the first, the wavelength ($\lambda _{j}$), at which
+the $j$-th period of the structure is designed, is modulated by an
+increasing function. This can be as simple or complex as you like. The
+proposed function was optimized with the Minuit module of PDL (Perl Data
+Language) \cite{minuit}. The other technique for proposing highly reflective
+structures over a wide region of the electromagnetic spectrum is to stack
+sub-mirrors tuned to different wavelengths. For each sub-mirror the
+dispersion relation is analyzed.
+}
 \subsection{Chirped-type Bragg mirrors}
 
 The generic form of the expression that modulates the design of photonic
