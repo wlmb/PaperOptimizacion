@@ -391,7 +391,8 @@ Fig. \ref{Fig2}(a). \notaL{Si queremos que $x_j$ vaya de 0 a 1 habría
 \caption{(a)Design wavelength $\lambda_{j}$ vs. period number $j$-th
   for the optimized structure ST-A with 63-periods.\notaL{Parece un
     poster miniatura. ¿La ilustración a la derecha está a escala o
-    es esquemática? ¿La necesitamos? Está tan chica que es ilegible}
+    es esquemática? ¿La necesitamos? Está tan chica que es
+    ilegible}\notaL{¿Qué es eso de $\lambda+1$? Creo que está mal}
   (b) Average reflectance of the structures designed with different
   values of $\alpha$ and $N_{p}$.\notaL{Por qué en la misma figura?
     ¿Cuál es el propósito de incluir esta? Cambia el cbrange para que
@@ -453,50 +454,66 @@ accounted for in our theory.\notaL{Quizás aquí puedas citar el
   Optical Materials {\bf 109}, 110012 (2020)
 {\tt https://doi.org/10.1016/j.optmat.2020.110012}}
 
-\notaL{Aquí voy.}
-
-Due to the absorptive nature of Si in the UV and visible region, it is relatively
+Due to the disipative nature of Si in the UV and the visible region, it is relatively
 difficult to design porous silicon omnidirectional mirrors in that region.
 However, in the IR region, it is relatively easy to obtain highly reflective
-and even omnidirectional photonic structures over a wide range. Therefore,
-the average reflectance was optimized using the function $f_{1}$ (Eq. (\ref{F1}))
-in the region of 850 to 3000 nm. It was found that the best value for
-$\alpha $ is 1.2 and the minimum thickness is 60.4 $\mu$m, distributed in
-90 periods. The complete design of the structure (named as ST-B) is graphed in Fig.
+and even omnidirectional photonic structures over a wide
+range. \notaL{Está rara la lógica: ¿optimizamos en esa región porque
+  es fácil o usamos $f_1$ porque optimizar es fácil? Quizás primero
+  debamos decir que nos interesa esa región y que como es fácil,
+  usamos $f_1$.}
+Therefore,
+the reflectance average in the region of 850 to 3000 nm and for all
+angles was optimized using the function $f_{1}$ (Eq. (\ref{F1})), yielding
+$\alpha=1.2$ with $N_p=90$ and a thickness of 60.4 $\mu$m. \notaL{Aquí
+  me vuelve a confundir. ¿90 es el ancho óptimo o
+  es el ancho mínimo que permitió... qué?} The resulting design
+wavelengths of the structured, designated as ST-B, \notaL{¿Por qué se llaman así? ¿Qué significa
+  ST?} are shown in Fig.
 \ref{Fig3}(a).
 \begin{figure}[tbph]
 \begin{center}
 \includegraphics[width=\textwidth]
 {F4OptimizedNIRPC.pdf}
 \end{center}
-\caption{(a) Distribution of $\protect\lambda _{j}$ in the $j$-th period
-modulated by the optimization of the function $f_{1}$ for the design of the
-multilayer structure of 90 periods. (b) Mapping of the average reflectance
-of the structures designed with different values of the $\protect\alpha $
-and $N_{p}$ parameters. The optimized parameters are $\protect\alpha =1.2$
-and 90 periods. (c) Mapping the calculated reflectance of the designed
-structure with the optimized values for non polarized light. (d) Comparison of
-reflectance spectra calculated and measured at different angles of incidence. The
-gray band indicates the region in which the reflectance is greater than 95$\%$. Inset
-there is a photograph of the synthesized structure.}
+\caption{(a) Design wavelengths $\lambda_j$ as a function of period
+  number $j$ for sample ST-B. (b) Average reflectance $\braket{R}$
+for different values of the parameters $\alpha$
+and $N_p$ parameters. \notaL{Cambia el letrero en la figura} The
+optimized parameters $\protect\alpha =1.2$
+and $N_p=90$ are displayed as a white spot.\notaL{No se ve que sea el
+  óptimo. Quizás se necesiten línes de contorno más juntas.} (c)
+Calculated reflectance of the optimized
+structure for non polarized light.\notaL{¿QUé indica la raya punteada
+  y el letrero en la figura?} (d) Comparison of
+the calculated and measured spectra  for several angles of incidence. The
+gray band indicates the region in which the reflectance is greater than 95$\%$. Inset:
+photograph of the synthesized structure.}
 \label{Fig3}
 \end{figure}
 
-In Fig \ref{Fig3}(b) the average reflectance of structures
-designed with different values of $\alpha$ and $N_{p}$ is mapped. As in the
+\notaL{Tengo los mismos comentarios que para la figura previa.}
+Fig \ref{Fig3}(b) shows $\braket{R}$ for
+different values of $\alpha$ and $N_{p}$. As in the
 previous case, the optimized parameters are within the zone of maximum
-average reflectance. The reflectance calculation shows that this structure
-has a wide quasi-omnidirectional gap that goes from 850 to 3000 nm and from
-0${{}^\circ}$ to 70${{}^\circ}$ of incidence; the corresponding contour plot is
-shown in Fig. \ref{Fig3}(c) and its average reflectance between $850-3000$ nm is
-greater than 95\%. The measured and calculated reflectance spectra have very
-similar characteristics as shown in Fig \ref{Fig3}(d).  The synthesized PS
-multilayered 1D photonic structure has a quasi omnidirectional (from 0${{}^\circ}$
-to 60${{}^\circ}$) band gap of approximately 1800 nm. The difference
+average reflectance. \notaL{No debería ser el mismísimo máximo y no
+  nada más en la zona?} The reflectance calculation  is
+shown in Fig. \ref{Fig3}(c).  This structure
+has a wide quasi-omnidirectional gap with $R(\lambda,\theta)>0.95$
+with $\lambda$ from 850 to 3000 nm and $\theta$ from
+$0^\circ$ to $70^\circ$.\notaL{Me da la impresión que confundías
+  promedio con reflectancia} The measured and calculated reflectance
+are compared  for several angles in Fig \ref{Fig3}(d). The synthesized PS
+multilayered 1D photonic structure behaves as a quasi omnidirectional
+mirror for $0^\circ\le\theta\le 60^\circ$ with a bandwidth of approximately 1800 nm. The difference
 between the calculated and measured spectra at the longer wavelengths can be
-attributed to a thickness gradient along the depth, which is more pronounced in
+attributed to a thickness gradient along the depth,\notaL{No entiendo:
+  está diseñada para tener un gradiente de ancho. Te refieres a un
+  gradiente adicional al diseñado?} which is more pronounced in
 the lower layers due to the restricted diffusivity of the electrolyte
-through the structure itself \cite{Negro2003,Vincent1993} and interface roughness.
+through the structure itself \cite{Negro2003,Vincent1993} and
+interface roughness \notaL{No se entiende si este es otro efecto o si
+  la rugosidad produce un gradiente de anchos}.
 
 \subsection{Photonic structure with sub-mirrors stacking}
 
