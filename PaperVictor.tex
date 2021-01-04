@@ -514,25 +514,33 @@ the lower layers due to the restricted diffusivity of the electrolyte
 through the structure itself \cite{Negro2003,Vincent1993} and
 interface roughness \notaL{No se entiende si este es otro efecto o si
   la rugosidad produce un gradiente de anchos}.
-
-\subsection{Photonic structure with sub-mirrors stacking}
+y
+\subsection{Photonic structure with sub-mirrors stacking}\label{ss:stacked}
 
 Another technique to design Bragg mirrors in a wide range of the
-electromagnetic spectrum is by stacking sub-mirrors at different
+electromagnetic spectrum is by stacking sub-mirrors tuned to different
 wavelengths \cite{DelRio2018,Agarwal2003}. Such grouping must meet the condition
-imposed by the dispersion relation, $\cos KD=\frac{1}{2}\text{Tr}\,M$, where $D$ is
-the period, which corresponds to the actual thickness of the sub-mirror, $\pm K$
+imposed by the dispersion relation,\notaL{No se entiende, ¿de qué la gira
+la relación de dispersión? Es la relación de dispersión ¿de qué? Falta
+una explicación!} $\cos KD=\frac{1}{2}\text{Tr}\,M$, where $D$ is
+the period, which corresponds to the actual thickness of the
+sub-mirror\notaL{Por qué? El espejo podría tener varios periodos.}, $\pm K$
 represents a 1D Bloch's vector corresponding to a wave that propagates along
-$z$-direction \cite{Mochan1987,Mochan1988,Perez2018}, and T$\text{r}$ denotes the
+the $z$-direction \cite{Mochan1987,Mochan1988,Perez2018}, and T$\text{r}$ denotes the
 trace. This equation is bounded by the minimum and maximum values that the cosine
 function can take. Furthermore, if  the value of $\left\vert \text{Tr}\left(
 M\right) \right\vert$ is $>2$, it indicates that this frequency will not
-be able to propagate through the structure.
+be able to propagate through the structure. \notaL{Las ideas están
+  bien, pero está muy mal explicado, en desorden}
 
-The ideal stack of sub-mirrors would be that PBG of the $j$-th mirror begins
-at the edge of the PBG of the $j-1$-th mirror, until the desired interval has been
+The ideal stack of sub-mirrors would be that edge where the PBG of the $j$-th mirror begins
+is close to the  edge of the where the PBG of the $j-1$-th mirror
+ends, and sufficient mirrors are stacked until the desired interval
+bandwidth has been
 covered. However, this arrangement does not give the maximum average reflectance due to
-the decrease in the reflectance at each intersection of the two PBGs. On the other hand,
+the decrease in the reflectance at each intersection of the two
+PBGs.\notaL{QUé es una intersección de PBG? Escribe para que el lector
+  entienda} On the other hand,
 the number of periods of each sub-mirror is an important parameter due to its direct
 dependence on the magnitude and  width of  the photonic band gap.  As the structures
 were synthesized using porous silicon, it is essential to minimize the number of
@@ -542,21 +550,34 @@ mirrors with a constant number of periods, in these cases ODBMs are not obtained
 For these reasons, the number of periods for each mirror was chosen as follows: for
 design wavelengths less than 500 nm ($\lambda_{D}<$500 nm), one period, for 500
 $<\lambda_{D}<$650 nm, two periods , for 650 $<\lambda_{D}<$800 nm, three, and for
-$\lambda_{D}>$ 800 nm, the number of periods was variable (Fig. \ref{Fig4}(a)).
+$\lambda_{D}>$ 800 nm, the number of periods was variable
+(Fig. \ref{Fig4}(a)). \notaL{No entendí el argumento, ni cómo
+  dterminaste para qué lambdas se usan tantos o cuántos periodos. ¿Fue
+  prueba y error? ¿Fue una optimización?}\notaL{Por cierto,
+  ¿optimizaste qué tanto traslapar espectros sucesivos o usaste la
+  regla de que se toquen los bordes de banda?}
 \begin{figure}[tbph]
 \begin{center}
 \includegraphics[width=\textwidth]
 {F6OptimizedNIRSE.pdf}
 \end{center}
-\caption{(a) Diagram showing the distribution of sub-mirrors and the corresponding
-number of periods in a PS multilayer. (b) Maximization of the average reflectance as
+\caption{\notaL{Stack, no stak. ¿Qué significa la región rugosa que
+    rodea la estructura?} (a) Diagram showing the distribution
+  of sub-mirrors and the corresponding
+number of periods in a PS multilayer.\notaL{Esto no es un cartel. No
+  entiendo qué pretende ilustrar el panel (a)} (b) Maximization of the average reflectance as
 a function of the overlap photonic band gap for the structures formed by sub-mirrors
-with a fixed number of periods (3 and 4), and for structures with the design of (a)
-using 3 and 6 periods for the tuned sub-mirrors in $\lambda>800$ nm. (c) Mapping the
-calculated reflectance of the designed structure with the optimized values for non
-polarized light. (d) Comparison of reflectance spectra calculated and measured at
-different angles of incidence. The gray band indicates the region in which the
-reflectance is greater than 95$\%$. Inset shows the top view photograph of the
+with a fixed number of periods \notaL{No has explicado a qué te
+  refieres con esta optimización. No has explicado qué es el overlap
+  photonic band gap. Esto parece tomado de un cartel, pero el artículo
+debe ser autocontenido; no estás ahí parado para explicar.}(3 and 4),
+and for structures with the design of (a)
+using 3 and 6 periods for the tuned sub-mirrors in $\lambda>800$
+nm.\notaL{No entendí nada.} (c)
+Calculated reflectance for the optimized structure for non
+polarized light. (d) Comparison between the measured and calculated
+reflectance spectra at several angles of incidence. The gray band indicates the region in which the
+reflectance is greater than 95$\%$. Inset shows a photograph with a top view of the
 synthesized structure.}
 \label{Fig4}
 \end{figure}
@@ -578,28 +599,36 @@ reflectance is 95.3$\%$, when the  electromagnetic waves are incident from
 0${{}^\circ}$ to 89 ${{}^\circ}$. The optimized photonic structure is made up of 18
 sub-mirrors tuned to the following wavelengths 400, 460, 510, 570, 640, 720,810,
 910, 1020, 1150, 1290, 1450, 1630, 1830, 2060, 2320, 2610 and 2860 nm  with periods
-of 1 (400, 460 nm), 2(510, 570, 640 nm), 3 (720 nm) and 6 (810 nm and above).
+of 1 (400, 460 nm), 2(510, 570, 640 nm), 3 (720 nm) and 6 (810 nm and
+above).\notaL{Sugiero reescribir tratando de que la explicación sea clara}
 
 The reflectance mapping shown in Fig \ref{Fig4}(c) reveals a quasi omnidirectional
-band gap from 950 to 2900 nm, taking into account 0${{}^\circ}$ to 60${{}^\circ}$ of
-incidence. It is also observed that at incidence angles $>$70${{}^\circ}$, for long
+mirror in the range from 950 to 2900 nm, for $\theta$ between
+$0^\circ$ and $60^\circ$. It is also observed that at incidence angles $>$70${{}^\circ}$, for long
 wavelengths the reflectance decreases and has oscillations, which are attributed to
 the greater penetration of the electromagnetic field within the structure, as shown
-by Puente-D\'{\i}az, et al \cite{Puente2020}. Furthermore, in supplementary
-information we show the transfer matrix trace calculations as a function of the
-wavelength and the incidence angle for the ST-C photonic structure using the TE and
-TM polarization. In Fig \ref{Fig4}(d) the calculated and measured reflectance
-corresponding to the structure ST-C, at different angles of incidence is compared.
-Although, the quasi omnidirectional band gap of the synthesized structure is
-slightly less than that calculated (located from 950 to 2750 nm), the measured PBG
-is almost twice as compared to the recently reported similar structures
+by Puente-D\'{\i}az, et al \cite{Puente2020}. Furthermore, in the supplementary
+information we show the trace of the transfer matrix as function of the
+wavelength and the incidence angle for the ST-C photonic structure for TE and
+TM polarizations.\notaL{¿Para qué ponemos esta información
+  suplementaria? ¿Qué aprenderá el lector de ella?} In Fig
+\ref{Fig4}(d) we compare the calculated and measured reflectance
+for the structure ST-C, at several angles of incidence.
+Although, the quasi omnidirectional wavelength range of the synthesized structure is
+slightly smaller than the calculated one, from 950 to 2750 nm, the measured PBG
+is almost twice as wide as those of recently reported similar structures
 (\cite{DelRio2018,Chavez2020}).
 
-Finally, table 2 shows some porous silicon based ODBMs designed to operate in the
+Finally, table 2 shows some porous silicon based ODBMs \notaL{Me
+  preocupa un poco la nomenclatura: si no son periódicos, ¿son espejos
+  de Bragg?} designed to operate in the
 NIR region and the width of the omnidirectional band gap is compared with the
 structures analyzed in the present study. The table reveals that the porous silicon
 based structures ST-B and ST-C have the widest gap width, being 1.8 times greater
-than recently reported works.
+than recently reported works.\notaL{Es justa la comparación? Ellos
+  estaban tratando de hacer un espejo de espectro muy amplio y no
+  pudieron hacerlo tan ancho como nosotros o simplemente estaban
+  haciendo otra cosa?}
 
 \begin{table}[h!]
 	\begin{center}
@@ -643,32 +672,35 @@ Chavez, et al \cite{Chavez2020}. & 2020 & 1000-2000 & 1000 \\
 
 \section{Conclusion}\label{s:conc}
 
-We have demonstrated the formation of highly reflective PS multilayer photonic
-structures optimized using two types of design techniques for maximal reflectance
-and minimal thickness in the NIR region. With \textit{chirped}-type Bragg mirrors,
+We have designed, fabricated and characterized highly reflective PS multilayer photonic
+structures with a wide spectral range, optimized using two techniques for maximal reflectance
+and minimal thickness in the NIR region \notaL{Parte del trabajo no
+  fue NIR.} With \textit{chirped}-type
+Bragg\notaL{Tengo la duda sobre llamarles Bragg} mirrors,
 two regions of the electromagnetic spectrum were analyzed. The first region (350nm -
-1400 nm), optimized through an increasing function resulted in an average
-reflectance $>85\%$ with the quasi omnidirectional PBG of 360 nm centered at 1160 nm
-(980-1340 nm) for the angular range 0-60${{}^\circ}$ and more than 50$\%$ of
-reflectance from 550-980nm. The second structure was designed for 850-3000 nm
-wavelength range and the synthesized structure with optimized parameters resulted in
-the average reflectance of $~91\%$ with q-OD bandgap from 980 to 2780 nm and a
-thickness of 60.4 $\mu$m. The other design technique consisting of sub-mirrors
-stacks (designed at different wavelengths), was optimized for maximum average
-reflectance with respect to the percentage overlap of the PBG for each sub-mirror. A
-multilayer structure using the optimized parameters with sub-mirrors stack method
-was obtained with the average reflectance of $~95\%$ and a thickness of 41.5 $\mu$m.
-Furthermore, this structure revealed a 1800 nm q-OD PBG, centered at 1850 nm, in
-angular range 0-60${{}^\circ}$. Therefore, this second technique was found to be
-better due to the decreased thickness (by a factor of $~1.5$) of the framework and
+1400 nm), optimized through an increasing function resulted in a
+reflectance $R>0.85$ with a range of 360 nm centered at 1160 nm
+(980-1340 nm) for the angular range $0-60^\circ$ and $R>0.50$ of
+reflectance from 550-980nm. The second structure was designed for a
+wavelength range from 850-3000 nm
+and the synthesized structure with optimized parameters resulted in
+the average reflectance of $~91\%$ with q-OD \notaL{No definiste q-OD
+  nunca} bandgap from 980 to 2780 nm and a
+thickness of 60.4 $\mu$m. The other design technique consists of
+stacking sub-mirrors
+tuned to different wavelengths, and was optimized for a maximum average
+reflectance using  the overlap of the gap of succesive sub-mirrors as
+the optimization parameter. We obtained
+a reflectance $R>0.95$ and a thickness of 41.5 $\mu$m within a
+wavelength range of 1800 nm centered at 1850 nm, with  an
+angular range $0-60^\circ$. Therefore, we found this second technique to be
+better as it yields thinner structures by a factor of $~1.5$ and
 increased average reflectance. Additionally, the analysis techniques developed here
 can be used to optimize reflectance with other refractive index contrasts in PS
-multilayers or different other systems composed of other types of materials. Such
+multilayers or in systems composed of other types of materials. Such
 proposed structures could be used as mirrors for solar concentrators, flat focusing
 reflectors, thermal regulators, or, if defects are included, as filters or remote
 chemical/biosensors with a wide angular independent response.
-
-
 
 \section*{Acknowledgments}
 This work was partially supported by Consejo Nacional de Ciencia y
