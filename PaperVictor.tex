@@ -1,3 +1,4 @@
+% !TeX spellcheck = en_US
 \documentclass{article}
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
@@ -15,7 +16,7 @@
 \renewcommand{\Affilfont}{\small}
 \newcommand{\notaL}[1]{{\color{orange}L: #1}}
 \newcommand{\notaVA}[1]{{\color{orange}VA: #1}}
-\newcommand{\notaVCG}[1]{{\bf \em \color{orange}VCG: #1}}
+\newcommand{\notaV}[1]{{\bf \em \color{orange}VCG: #1}}
 \definecolor{Addtext}{RGB}{0,0,255}
 \begin{document}
 
@@ -52,17 +53,17 @@ S.L.P., 78210, M\'{e}xico.}
 Porous silicon (PS) is a very versatile material for developing optical
 devices based on multilayered structures, since high and low porosity layers
 can be synthesized by a simple electrochemical technique. We
-maximize the reflectance $\braket{R}$ \notaL{El promedio no depende
+maximize the average \notaV{Agregue} reflectance $\braket{R}$ \notaL{El promedio no depende
   de lambda ni theta, y prom es castellano}   of PS-based
-mirrors  averaged over a wide wavelength
+mirrors within \notaV{Agregue y quite "averaged over"} a wide wavelength
 and angular range, for different
 porosity contrasts, and we minimize their thickness. Optimization is
 performed in the visible (Vis) and near infrarred (NIR) regions of the
 electromagnetic spectrum. We design the mirrors using \textit{chirped}-type
-structures and by \textit{stacking} sub-mirrors. We found \notaL{No
+structures and by \textit{stacking} sub-mirrors. We find \notaL{No
   estoy seguro del tiempo} that
-chirped structures were better suited for the Vis stacked
-sub-mirrors for the NIR region. We design, fabricate and test some
+chirped structures are more suitable for the Vis range, while stacked
+sub-mirrors are better for the NIR region. \notaV{Corregi oracion} We design, fabricate and test some
 optimized omnidirectional structures with less than 100
 periods.
 \end{abstract}
@@ -115,9 +116,9 @@ Till now, different deposition techniques have been used to obtain omnidirection
 BM (ODBM) that operate on the visible and near infrared (Vis-NIR) range of the
 electromagnetic spectrum. For example, Chen et al. \cite{Chen1999},
 \notaL{Hay que checar que la puntuación vaya después de las citas,
-  para este estilo de citas entre corchetes} have
+  para este estilo de citas entre corchetes} \notaV{Comentario atendido} have
 reported an ODBM of about 70 nm in the NIR range with 6-pairs  of
-TiO$_{2}$/SiO$_{2}$ layers deposited with a sol-gel method. Park et al., \cite{Park2003}
+TiO$_{2}$/SiO$_{2}$ layers deposited with a sol-gel method. Park et al. \cite{Park2003},
 used molecular beam epitaxy to grow a stack of four pairs of GaAs/AlAs layers,
 followed by its conversion to
 GaAs/Al$_{2}$O$_{3}$ layers by selective
@@ -126,7 +127,7 @@ nm. On the other hand, DeCorby et al. \cite{DeCorby2005}, fabricated mirrors by
 coupling multiple layers of Ge$_{33}$As$_{12}$Se$_{55}$ chalcogenide glass and
 polyamide-imide polymer, deposited by thermal evaporation and spin-casting
 respectively, to obtain a 150 nm wide omnidirectional band centered at
-1750 nm. Furthermore, Jena et al., \cite{Jena2019}
+1750 nm. Furthermore, Jena et al. \cite{Jena2019},
 used sequential asymmetric bipolar pulsed DC magnetron sputtering (for TiO$%
 _{2}$ layers) and radio frequency magnetron sputtering (for SiO$_{2}$
 layers) to generate TiO$_{2}$/SiO$_{2}$ 1D-PC's and achieved ODBM from
@@ -181,7 +182,8 @@ Finally, we discuss our conclusions in Section \ref{s:conc}.
 \notaL{Pon etiquetas a todo para poderlo referir}
 For the analysis of the propagation of electromagnetic fields through
 multilayer systems it is usual to employ the transfer matrix
-method\notaL{reference}. Assuming the system is 1D, with variations
+method \notaL{reference} \cite{Pochi2005, Ariza2011} \notaV{Agregue dos referencias}. 
+Assuming the system is 1D, with variations
 only along the $z$ directions, and that the polarization of light is either
 transverse electric (TE) or transverse magnetic (TM)\notaL{si no, la matriz
   sería de 4x4}, the
@@ -219,7 +221,7 @@ t=\frac{2Z_{\alpha
   }}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
 \end{equation}%
 where $M_{ij}$ \notaL{Quité las tildes, pues hubiera sido necesario
-  explicarlas, y no creo que sean importantes para el lector} are the elements
+  explicarlas, y no creo que sean importantes para el lector} \notaV{Tiene raz\'{o}, esto se debe diferenciar en la informacion suplementaria} are the elements
 of the transfer matrix which transfer
 the fields from its surface interface with vacuum at $z_0$ towards the
 substrate at $z_s$,  $Z_0$ is the surface impedance of vacuum and $Z_s$ is the
@@ -236,7 +238,7 @@ $R=|r|^{2}$ and the
 transmittance by $T=\beta \left\vert t\right\vert ^{2}$ with $\beta
 =\text{Re}Z_{0}/\text{Re}Z_{s}$ for TE polarization and $\beta =\text{Re}Z_{s}/\text{Re}Z_{0}$ for
 TM polarization.\notaL{En el cálculo, ¿tomaste las partes reales? No
-  estaban en la fórmula} The complex refractive index of the porous
+  estaban en la fórmula} \notaV{Realmente inclu\'{i} la transmitancia solo por completez (no inclu\'{i} c\'{a}lculo alguno)} The complex refractive index of the porous
 layers were obtained through the Bruggeman's effective medium theory, which
 has been reported to adequately reproduce the PS optical parameters
 \cite{Giusseppe2011,Pap2006,Estrada2018}.
@@ -251,7 +253,7 @@ Language) \cite{minuit}. The other technique for proposing highly reflective
 structures over a wide region of the electromagnetic spectrum is to stack
 sub-mirrors tuned to different wavelengths. For each sub-mirror the
 dispersion relation is analyzed.
-}
+} \notaV{De acuerdo}
 
 \section{Experimental details}\label{s:exp}
 
