@@ -16,7 +16,7 @@
 \renewcommand{\Affilfont}{\small}
 \newcommand{\notaL}[1]{{\color{orange}L: #1}}
 \newcommand{\notaVA}[1]{{\color{orange}VA: #1}}
-\newcommand{\notaV}[1]{{\bf \em \color{orange}VCG: #1}}
+\newcommand{\notaV}[1]{{\bf \em \color{green}VCG: #1}}
 \definecolor{Addtext}{RGB}{0,0,255}
 \begin{document}
 
@@ -186,20 +186,128 @@ with significantly thinner structures. \notaL{Dejo para resultados y
   conclusiones los detalles de con quién comparamos y qué salió.}
 Finally, we discuss our conclusions in Section \ref{s:conc}.
 
-\section{Theory}\label{s:theory}
+\section{Numerical simulation} \label{s:theory}
+
+\notaV{Propuesto por Dr. David, se omite "Theory"}
 
 \notaL{Pon etiquetas a todo para poderlo referir}
-For the analysis of the propagation of electromagnetic fields through
-multilayer systems it is usual to employ the transfer matrix
-method \notaL{reference} \cite{Pochi2005, Ariza2011} \notaV{Agregue dos referencias}. 
-Assuming the system is 1D, with variations
-only along the $z$ directions, and that the polarization of light is either
-transverse electric (TE) or transverse magnetic (TM)\notaL{si no, la matriz
-  sería de 4x4}, the
-transfer matrix $M\left(z_{2},z_{1}\right)$ is
-a 2x2 matrix that relates the components of the electric $E_{\| }$
-and magnetic  $H_{\|}$ fields parallel to the $xy$ plane
-evaluated at $z_2$ to their value at $z_{1}$,
+
+\notaV{Parrafos reescritos por Dr. David}
+
+In this paper, two techniques are developed to design 
+multilayer photonic structures. In the first, the wavelength 
+($\lambda _{j}$), at which the $j$-th period of the structure 
+is designed, is modulated by an increasing function. This can 
+be as simple or complex as you like. The proposed function was 
+optimized with the Minuit module of PDL (Perl Data Language) \cite{minuit}. 
+The other technique for proposing highly reflective structures 
+over a wide region of the electromagnetic spectrum is to stack
+sub-mirrors tuned to different wavelengths. For each 
+sub-mirror the dispersion relation is analyzed.
+
+For the analysis of the propagation of electromagnetic fields 
+through multilayer systems, we employ the transfer matrix 
+method based on Puente-Díaz et al., formalism \cite{Puente2020}. 
+In spite some equivalent formulations have been proposed to 
+obtain the optical properties of multilayer systems 
+\cite{Mochan1987,Ortiz2020,Chavez2020}, here we use a 
+recently developed formalism for the numerically stable 
+calculation of the reflectance of large multilayer systems. 
+Briefly describing, 
+we assume a 1D system with variations along the $z$ direction 
+and consider an incident linearly polarized beam of light 
+(either TE or TM polarization) that propagates throughout 
+the structure. The reflectance and transmittance are given by 
+$R=|r|^{2}$ and  $T=\beta \left\vert t\right\vert ^{2}$, respectively, with
+\begin{equation}
+	r=\mp \frac{Z_{0}M_{11}+M_{12}-Z_{0}Z_{s}M_{21}-Z_s
+		M_{22}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{rBloch}
+\end{equation}%
+and
+\begin{equation}
+	t=\frac{2Z_{\zeta
+	}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
+\end{equation}%
+where $Z_0$ and $Z_s$ are the impedances of the vacuum 
+and the substrate, respectively. $\beta =\text{Re}Z_{0}/\text{Re}Z_{s}$ is choosen for 
+TE polarization while $\beta=\text{Re}Z_{s}/ 
+\text{Re}Z_{0}$ for TM polarization. The upper sign 
+$-$ in Eq. (\ref{rBloch}) and the subscript 
+$\zeta =s$ in Eq. (\ref{tBloch}) are chosen for 
+the case of TE polarization, while the lower sign 
+$+$ and the subscript $\zeta =0$ correspond to TM 
+polarization. Furthermore, $M_{ij}$ are the elements
+of the transfer matrix which relates
+the electromagnetic fields of all interfaces in the structure through
+\begin{equation}
+	M=\frac{1}{Z^{+}-Z^{-}}\left( 
+	\begin{array}{cc}
+		Z^{+}\text{exp}\left( iKD\right) -Z^{-}\text{exp}\left( -iKD\right)  & 
+		-2iZ^{+}Z^{-}\sin KD \\ 
+		2i\sin KD & Z^{+}\text{exp}\left( -iKD\right) -Z^{-}\text{exp}\left(
+		iKD\right) 
+	\end{array}%
+	\right) \text{.}  \label{MsBloch}
+\end{equation}
+In this case, $Z^{\pm }$ can be obtained as 
+\begin{equation}
+	Z^{\pm }=-\frac{\widetilde{M}_{12}}{\widetilde{M}_{11}-\Lambda _{\pm }}\text{,}  \label{ZBloch}
+\end{equation}%
+being 
+\begin{equation}
+	\Lambda _{-}=\frac{1}{2}\text{tr}\widetilde{M}\pm i\sqrt{1-\left( \text{tr}\widetilde{M}/2\right)
+		^{2}}\text{,}  \label{LBloch}
+\end{equation}%
+where the sign that satisfies the relation $\left\vert \Lambda
+_{-}\right\vert >1$, and $\Lambda _{+}=\Lambda _{-}^{-1}$ is chosen.
+Moreover, tr corresponds to the trace and $\widetilde{M}_{ij}$ $\left( i,j=1,2\right) 
+$ denote the elements of the usual transfer matrix $\widetilde{M}$ of the $N$-layer
+system, that is, 
+\begin{equation}
+	\widetilde{M} =\Pi _{j=1}^{N}%
+	\begin{bmatrix}
+		\cos k_{j}d_{j} & iZ_{j}\sin k_{j}d_{j} \\ 
+		iY_{j}\sin k_{j}d_{j} & \cos k_{j}d_{j}%
+	\end{bmatrix}%
+	,  \label{Mcoef}
+\end{equation}%
+where 
+\begin{equation}
+	k_{j}=\sqrt{\epsilon _{j}q^{2}-Q^{2}}  \label{kj}
+\end{equation}%
+is the normal component (to the interfaces) of the wave vector, $Z_{j}$ is
+the corresponding surface impedance, $Y_{j}=1/Z_{j}$ is the surface
+admittance, $\epsilon _{j}=n_{j}^{2}$ is the permitivity (for simplicity we
+assumed all media were nonmagnetic, with permeability $\mu _{i}=1$), $%
+q=\omega /c=2\pi /\lambda $ is the free-space wavenumber corresponding to
+the wavelength $\lambda $ and 
+\begin{equation}
+	Q=n_{0}q\sin \theta _{i}  \label{Snell}
+\end{equation}%
+is the projection of wavevector onto the interfaces, 
+which is conserved according to Snell's law, with 
+$\theta _{i}$ the angle of incidence. The surface 
+impedances are given by $Z_{j}=q/k_{j}$ for TE 
+polarization and $Z_{j}=k_{j}/q\epsilon _{j}$ for 
+TM polarization. Moreover, sub-index $0$ and $s$ 
+refer to the incident and substrate media, respectively.
+The complex refractive index of the porous layers were 
+obtained through the Bruggeman's effective medium 
+theory, which has been reported to adequately reproduce 
+the PS optical parameters \cite{Giusseppe2011,Pap2006,Estrada2018}.
+
+
+\notaV{Se omite "For the analysis of the propagation of 
+electromagnetic fields through multilayer systems it is 
+usual to employ the transfer matrix method \notaL{reference} 
+\cite{Pochi2005, Ariza2011}. Assuming the system is 1D, with 
+variations only along the $z$ directions, and that the 
+polarization of light is either transverse electric (TE) or 
+transverse magnetic (TM)\notaL{si no, la matriz   sería de 4x4}, 
+the transfer matrix $M\left(z_{2},z_{1}\right)$ is a 2x2 matrix 
+that relates the components of the electric $E_{\| }$ and 
+magnetic  $H_{\|}$ fields parallel to the $xy$ plane evaluated 
+at $z_2$ to their value at $z_{1}$,
 \begin{equation*}
 \left(
 \begin{array}{c}
@@ -213,13 +321,7 @@ H_{\| }%
 \end{array}%
 \right) _{z_{1}}.
 \end{equation*}%
-Many equivalent formulations have been proposed to obtain and use $M$
-\cite{Mochan1987,Ortiz2020,Chavez2020}. Here we use a recently developed formalism
-for the numerically stable calculation of the reflectance of large
-multilayer systems, as
-proposed by Puente-Díaaz, et al. \cite{Puente2020}, summarized in the
-supplementary information. The
-explicit expressions for the optical coefficients are:
+Many equivalent formulations have been proposed to obtain and use $M$ \cite{Mochan1987,Ortiz2020,Chavez2020}. Here we use a recently developed formalism for the numerically stable calculation of the reflectance of large multilayer systems, as proposed by Puente-Díaaz, et al. \cite{Puente2020}, summarized in the supplementary information. The explicit expressions for the optical coefficients are: 
 \begin{equation}
 r=\mp \frac{Z_{0}M_{11}+M_{12}-Z_{0}Z_{s}M_{21}-Z_s
 M_{22}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{rBloch}
@@ -229,40 +331,33 @@ and
 t=\frac{2Z_{\alpha
   }}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
 \end{equation}%
-where $M_{ij}$ \notaL{Quité las tildes, pues hubiera sido necesario
-  explicarlas, y no creo que sean importantes para el lector} \notaV{Tiene raz\'{o}, esto se debe diferenciar en la informacion suplementaria} are the elements
-of the transfer matrix which transfer
-the fields from its surface interface with vacuum at $z_0$ towards the
-substrate at $z_s$,  $Z_0$ is the surface impedance of vacuum and $Z_s$ is the
-surface impedance of the substrate, and we define $r=F_r/F_i$ and $t=F_t/F_i$ in terms
-of the reflected and transmitted fields, where we choose the $F$'s as electric
-fields for (TE) polarization and magnetic fields
-for transverse magnetic polarization (TM). The upper sign $-$ in
-Eq. (\ref{rBloch}) and the subscript $\alpha =s$
-in Eq. (\ref{tBloch}) are chosen for the case of TE polarization, while
-the lower sign $+$ and the subscript $\alpha =0$ correspond to TM
-polarization, respectively.
-The reflectance is given by
-$R=|r|^{2}$ and the
-transmittance by $T=\beta \left\vert t\right\vert ^{2}$ with $\beta
-=\text{Re}Z_{0}/\text{Re}Z_{s}$ for TE polarization and $\beta =\text{Re}Z_{s}/\text{Re}Z_{0}$ for
-TM polarization.\notaL{En el cálculo, ¿tomaste las partes reales? No
-  estaban en la fórmula} \notaV{Realmente inclu\'{i} la transmitancia solo por completez (no inclu\'{i} c\'{a}lculo alguno)} The complex refractive index of the porous
-layers were obtained through the Bruggeman's effective medium theory, which
-has been reported to adequately reproduce the PS optical parameters
-\cite{Giusseppe2011,Pap2006,Estrada2018}.
+where $M_{ij}$ \notaL{Quité las tildes, pues hubiera sido 
+necesario explicarlas, y no creo que sean importantes para 
+el lector} are the elements of the transfer matrix which 
+relates the electromagnetic fields of all interfaces in 
+the structure through transfer the fields from its surface 
+interface with vacuum at $z_0$ towards the substrate at $z_s$,
+$Z_0$ is the surface impedance of vacuum and $Z_s$ is the 
+surface impedance of the substrate, and we define $r=F_r/F_i$ 
+and $t=F_t/F_i$ in terms of the reflected and transmitted 
+fields, where we choose the $F$'s as electric fields for 
+(TE) polarization and magnetic fields for transverse 
+magnetic polarization (TM).  The upper sign $-$ in Eq. 
+(\ref{rBloch}) and the subscript $\alpha =s$ in Eq. 
+(\ref{tBloch}) are chosen for the case of TE polarization, 
+while the lower sign $+$ and the subscript $\zeta =0$ 
+correspond to TM polarization, respectively. The reflectance 
+is given by $R=|r|^{2}$ and the transmittance by 
+$T=\beta \left\vert  t\right\vert ^{2}$ with 
+$\beta =\text{Re}Z_{0}/\text{Re}Z_{s}$ for TE polarization 
+and $\beta =\text{Re}Z_{s}/\text{Re}Z_{0}$ for TM 
+polarization.\notaL{En el cálculo, ¿tomaste las partes 
+reales? No estaban en la fórmula} The complex refractive 
+index of the porous layers were obtained through the 
+Bruggeman's effective medium theory, which has been 
+reported to adequately reproduce the PS optical 
+parameters \cite{Giusseppe2011,Pap2006,Estrada2018}.}
 
-\notaL{Creo que esto debería estar más adelante:
-  After the next section, two techniques are developed to design multilayer
-photonic structures. In the first, the wavelength ($\lambda _{j}$), at which
-the $j$-th period of the structure is designed, is modulated by an
-increasing function. This can be as simple or complex as you like. The
-proposed function was optimized with the Minuit module of PDL (Perl Data
-Language) \cite{minuit}. The other technique for proposing highly reflective
-structures over a wide region of the electromagnetic spectrum is to stack
-sub-mirrors tuned to different wavelengths. For each sub-mirror the
-dispersion relation is analyzed.
-} \notaV{De acuerdo}
 
 \section{Experimental details}\label{s:exp}
 
