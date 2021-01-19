@@ -55,12 +55,14 @@ devices based on multilayered structures, since high and low porosity layers
 can be synthesized by a simple electrochemical technique. In the present work, the
 average reflectance $\braket{R}$ \notaL{No entiendo por qué insisten
   en no usar tipografía matemática para símbolos como $R$. Los
-  símbolos de menor y mayor no corresponden a los de promediar.}. of PS-based mirrors is maximized within a wide
+  símbolos de menor y mayor no corresponden a los de promediar.}
+\notaV{Fue un error mio. No habia agregado el paquete "braquet"}. of PS-based mirrors is maximized within a wide
 wavelength and angular range for different porosity contrasts. Optimization is
 performed to maximize the reflectance for minimum  thickness of the structure in the
-visible (Vis) and near infrarred (NIR) regions of the electromagnetic spectrum.   The
-mirrors are designed \notaL{No entiendo para qué haber cambiado el
-  modo de activo a pasivo; es mucho mejor el activo.} using \textit{chirped}-type structures and \textit{stacking}
+visible (Vis) and near infrarred (NIR) regions of the electromagnetic spectrum. We design the
+mirrors  \notaL{No entiendo para qué haber cambiado el
+  modo de activo a pasivo; es mucho mejor el activo.} 
+\notaV{Cambie la oracion a voz activa} using \textit{chirped}-type structures and \textit{stacking}
 sub-mirrors. The chirped structures are found to be more suitable for the Vis range,
 while stacked sub-mirrors are found to be better for the NIR region. Design, fabrication
 and testing of some optimized omnidirectional structures with less
@@ -166,113 +168,71 @@ Finally, we discuss our conclusions in Section \ref{s:conc}.
 \notaV{Parrafos reescritos por Dr. David}
 \notaL{¿Por qué reescribir toda la teoría? ¿Por qué dar tanta teoría?}
 
-We develop two techniques to design
-multilayer photonic structures. In the first, the wavelength
-($\lambda _{j}$) to which the $j$-th pair of layers is tuned is modulated by
-a given function of $j$. Several functions are proposed and their
-parameters are optimized to maximize the $\braket{R}$ averaged over
-wavelength and angle over a suitable range.
-To that end we employed the Minuit module of the Perl Data Language (PDL) \cite{minuit}.
-The other technique we employed consisted in stacking
-sub-mirrors tuned to different wavelengths, chosen so that their
-spectral ranges overlap. For each submirror, the spectral range was
-obtained from the dispersion relation of a corresponding periodic
-structure.
+\notaV{Regreso el parrafo de la primera versi\'{o}n}
 
-For the analysis of the propagation of electromagnetic fields
-through multilayer systems, we employ a variant of the transfer matrix
-method based on the formalism of Puente-Díaz et al. \cite{Puente2020}.
-Its advantage over other formally equivalent approaches
-\cite{Mochan1987,Ortiz2020,Chavez2020} is that it allows a
-numerically stable
-calculation of the reflectance even of very large multilayer systems,
-even in the presence of absorption.
-We assume  the system has  variations only along the $z$ direction
-and consider an incident linearly polarized beam of light
-(either TE or TM polarization) that propagates throughout
-the structure. The reflectance and transmittance are given by
-$R=|r|^{2}$ and  $T=\beta \left\vert t\right\vert ^{2}$,
-respectively, with \cite{Puente2020}
+For the analysis of the propagation of electromagnetic fields through
+multilayer systems it is usual to employ the transfer matrix
+method \cite{PerezA2004,Pochi2005} \notaL{reference}. Assuming the system is 1D, with variations
+only along the $z$ directions, and that the polarization of light is either
+transverse electric (TE) or transverse magnetic (TM), the
+transfer matrix $M\left(z_{2},z_{1}\right)$ is
+a 2x2 matrix that relates the components of the electric $E_{\| }$
+and magnetic  $H_{\|}$ fields parallel to the $xy$ plane
+evaluated at $z_2$ to their value at $z_{1}$,
+\begin{equation*}
+	\left(
+	\begin{array}{c}
+		E_{\|} \\
+		H_{\| }%
+	\end{array}%
+	\right) _{z_{2}}=M\left( z_{2},z_{1}\right) \left(
+	\begin{array}{c}
+		E_{\| } \\
+		H_{\| }%
+	\end{array}%
+	\right) _{z_{1}}.
+\end{equation*}%
+Many equivalent formulations have been proposed to obtain and use $M$
+\cite{Mochan1987,Ortiz2020,Chavez2020}. Here we use a recently developed formalism
+for the numerically stable calculation of the reflectance of large
+multilayer systems, as
+proposed by Puente-Díaaz, et al. \cite{Puente2020}, summarized in the
+supplementary information. The
+explicit expressions for the optical coefficients are:
 \begin{equation}
-	r=\sigma \frac{Z_{0}M_{11}+M_{12}-Z_{0}Z_{s}M_{21}-Z_s
+	r=\mp \frac{Z_{0}M_{11}+M_{12}-Z_{0}Z_{s}M_{21}-Z_s
 		M_{22}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{rBloch}
 \end{equation}%
 and
 \begin{equation}
-	t=\frac{2\zeta}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
+	t=\frac{2Z_{\alpha
+	}}{Z_{0}M_{11}-M_{12}-Z_{0}Z_{s}M_{21}+Z_{s}M_{22}},  \label{tBloch}
 \end{equation}%
-where $Z_0$ and $Z_s$ are the surface impedances of vacuum
-and substrate, respectively, $\beta =\text{Re}Z_{0}/\text{Re}Z_{s}$,
-$\sigma=-1$ and
-$\zeta =Z_s$ for
-TE polarization, while $\beta=\text{Re}Z_{s}/
-\text{Re}Z_{0}$, $\sigma=+1$, and $\zeta =Z_0$ for TM
-polarization.
-Here, $M_{ij}$ are the elements
-of the reconstructed transfer matrix
-\begin{equation}
-\resizebox{\textwidth}{!}{$\displaystyle{
-	M=\frac{1}{Z^{+}-Z^{-}} \left(
-	\begin{array}{cc}
-		Z^{+}\text{exp}\left( iKD\right) -Z^{-}\text{exp}\left( -iKD\right)  &
-		-2iZ^{+}Z^{-}\sin KD \\
-		2i\sin KD & Z^{+}\text{exp}\left( -iKD\right) -Z^{-}\text{exp}\left(
-		iKD\right)
-	\end{array}%
-	\right) \text{.}}$}
-\label{MsBloch}
-\end{equation}
-which relates the electromagnetic fields at the substrate to those at
-the surface,
-Here, $Z^{\pm }$ are the surface impedances of the multilayered system
-for fields propagating toward the substrate ($+$) or towards vacuum
-($-$), and are given by
-\begin{equation}
-	Z^{\pm }=-\frac{\widetilde{M}_{12}}{\widetilde{M}_{11}-\Lambda _{\pm }}\text{,}  \label{ZBloch}
-\end{equation}%
-where
-\begin{equation}
-	\Lambda _{-}=\frac{1}{2}\text{Tr}\,\widetilde{M}\pm
-        i\sqrt{1-\left( \text{Tr}\,\widetilde{M}/2\right)
-		^{2}}\text{,}  \label{LBloch}
-\end{equation}%
-is chosen to satisfy the inequality $\left\vert \Lambda
-_{-}\right\vert >1$, and $\Lambda _{+}=1/\Lambda _{-}$, and Tr denotes
-the trace. $\widetilde{M}$ denotes the usual transfer matrix
-\begin{equation}
-	\widetilde{M} = \prod \limits_{j=1}^{N}%
-	\begin{pmatrix}
-		\cos k_{j}d_{j} & iZ_{j}\sin k_{j}d_{j} \\
-		iY_{j}\sin k_{j}d_{j} & \cos k_{j}d_{j}%
-	\end{pmatrix}%
-	\label{Mcoef}
-\end{equation}%
-of the multilayered system, where
-\begin{equation}
-	k_{j}=\sqrt{\epsilon _{j}q^{2}-Q^{2}}  \label{kj}
-\end{equation}%
-is the normal component of the wave vector whithin the $j$-th layer, $Z_{j}$ is
-its surface impedance, $Y_{j}=1/Z_{j}$ its surface
-admittance, $\epsilon _{j}=n_{j}^{2}$ its permitivity (for simplicity we
-assumed all media were nonmagnetic, with permeability $\mu _{i}=1$),
-$q=\omega /c=2\pi /\lambda $ is the free-space wavenumber corresponding to
-the wavelength $\lambda $ and
-\begin{equation}
-	Q=n_{0}q\sin \theta _{i}  \label{Snell}
-\end{equation}%
-is the projection of wavevector onto the interfaces,
-which is conserved according to Snell's law, with
-$\theta _{i}$ the angle of incidence. The surface
-impedances are given by $Z_{j}=q/k_{j}$ for TE
-polarization and $Z_{j}=k_{j}/q\epsilon _{j}$ for
-TM polarization. The complex refractive index of the porous layers were
-obtained through the Bruggeman's effective medium
-theory, which has been reported to adequately reproduce
-the PS optical parameters \cite{Giusseppe2011,Pap2006,Estrada2018}.
+where $M_{ij}$ are the elements
+of the transfer matrix which transfer
+the fields from its surface interface with vacuum at $z_0$ towards the
+substrate at $z_s$,  $Z_0$ is the surface impedance of vacuum and $Z_s$ is the
+surface impedance of the substrate, and we define $r=F_r/F_i$ and $t=F_t/F_i$ in terms
+of the reflected and transmitted fields, where we choose the $F$'s as electric
+fields for (TE) polarization and magnetic fields
+for transverse magnetic polarization (TM). The upper sign $-$ in
+Eq. (\ref{rBloch}) and the subscript $\alpha =s$
+in Eq. (\ref{tBloch}) are chosen for the case of TE polarization, while
+the lower sign $+$ and the subscript $\alpha =0$ correspond to TM
+polarization, respectively.
+The reflectance is given by
+$R=|r|^{2}$ and the
+transmittance by $T=\beta \left\vert t\right\vert ^{2}$ with $\beta
+=\text{Re}Z_{0}/\text{Re}Z_{s}$ for TE polarization and $\beta =\text{Re}Z_{s}/\text{Re}Z_{0}$ for
+TM polarization. The complex refractive index of the porous
+layers were obtained through the Bruggeman's effective medium theory, which
+has been reported to adequately reproduce the PS optical parameters
+\cite{Giusseppe2011,Pap2006,Estrada2018}.
 
 \notaL{Creo que no se ha explicado el proceso de diseño. No sé para
   qué damos tanto detalle sobre cómo se calculó, dado que todo está en
   la referencia.}
+
 \section{Experimental details}\label{s:exp}
 
 
@@ -315,6 +275,23 @@ stacked sub-mirrors.
 
 \notaL{Aquí quitaron un comentario mío. ¿Ya no es relevante? ¿Ya se
   explicó cómo se hizo el diseño?}
+
+\notaV{En el siguiente parrafo se explican los procesos de diseño}
+
+We develop two techniques to design
+multilayer photonic structures. In the first, the wavelength
+($\lambda _{j}$) to which the $j$-th pair of layers is tuned is modulated by
+a given function of $j$. Several functions are proposed and their
+parameters are optimized to maximize the $\braket{R}$ averaged over
+wavelength and angle over a suitable range.
+To that end we employed the Minuit module of the Perl Data Language (PDL) \cite{minuit}.
+The other technique we employed consisted in stacking
+sub-mirrors tuned to different wavelengths, chosen so that their
+spectral ranges overlap. For each submirror, the spectral range was
+obtained from the dispersion relation of a corresponding periodic
+structure.
+
+
 \subsection{Chirped-type Bragg mirrors}\label{ss:chirped}
 
 
@@ -401,6 +378,7 @@ region $\mathcal R_1$ with the thinnest structure (see table
 \ref{tab:tableA}). Furthermore, this structure has a calculated OD gap
 \notaL{I'm unsure about the nomenclature ``gap''. I guess it is
   theoretical, right?}
+ \notaV{Podr\'{i}a utilizar el t\'{e}rmino "OD width" para referirme al ancho omnidireccional del espejo}
 of 250 nm centered at 1125 nm with a
 reflectance
 $R>0.90$, as shown in Fig. \ref{Fig1}(b). We
@@ -422,9 +400,12 @@ in Fig. \ref{Fig1}(c). The profiles $f_i$ are qualitatively
 similar. For example, for $\mathcal R_1$ the optimal photonic
 structures have a small number of periods tuned to the wavelengths where
 silicon has a large absorption, i.e.,  the first periods of the
-structure. For $\mathcal R_2$ it is only necessary that the periods
-have an adequate ordering. \notaL{No entendí qué hay que comentar en
-  este caso}
+structure. 
+\notaV{replanteo la idea: "For $\mathcal R_2$ it is only necessary that the periods have an adequate ordering.}
+\notaL{No entendí qué hay que comentar en
+  este caso} 
+Due in $\mathcal R_2$, the absorption of porous silicon is negligible, the periods are distributed quasi-evenly.
+
 \begin{figure}
   \label{Fig1}
   \begin{center}
@@ -449,11 +430,13 @@ experimental limitations, we restrict our results to the case of
 unpolarized light. In Fig. \ref{Fig2}(a), the calculated and measured
 reflectance corresponding to sample $S_1$ are compared from 350 to 1400 nm for different angles of
 incidence ($\theta=10^\circ$, $20^\circ$, $30^\circ$, $40^\circ$,
-$50^\circ$, and $60^\circ$). The spectra are qualitatively similar,
-and for $\lambda>700$ nm and
-$10^\circ < \theta < 40^\circ$, they agree quantitatively, with a
-difference smaller than $5\%$. \notaL{Yo no veo nada especial en 40 grados: and for
-$\theta > 40^\circ$ both spectra are qualitatively consistent}  The
+$50^\circ$, and $60^\circ$). The spectra are qualitatively 
+similar, and for $\lambda>700$ nm and $10^\circ < \theta < 
+40^\circ$, they agree quantitatively, with a difference smaller 
+than $5\%$.
+\notaL{Yo no veo nada especial en 40 grados: and for
+$\theta > 40^\circ$ both spectra are qualitatively consistent} \notaV{De acuerdo. Se puede omitir}
+The
 measured reflectance is lower than the calculated one, more so at
 small wavelengths and large angles. This difference
 may be partially attributed to the scattering of light due to the
@@ -496,11 +479,20 @@ centered at 1880 nm.
 
 Another class of techniques for designing good reflectors across a wide spectral range
 is to stack sub-mirrors tuned to different wavelengths chosen with
-different criteria. For
-example, Agarwal et al. \cite{Agarwal2003} proposed to stack sub-mirrors as follows:
-tune the first sub-mirror to certain wavelength $\lambda_{1}$. Tune
-subsequent submirrors $j$ to wavelengths $\lambda_j$, chosen so that $\lambda_{j+1} +
-\lambda_{j}=2+j$ \notaL{This cannot be correct. Please check}. Furthermore, Estrada-Wiese et al. \cite{DelRio2018}
+different criteria. 
+\notaV{I rewrote this "For example, Agarwal et al. 
+	\cite{Agarwal2003} proposed to stack sub-mirrors as follows: 
+	tune the first sub-mirror to certain wavelength $\lambda_{1}$. 
+	Tune subsequent submirrors $j$ to wavelengths $\lambda_j$, 
+	chosen so that $\lambda_{j+1} + \lambda_{j}=2+j$."} 
+For example, Agarwal et al. \cite{Agarwal2003} proposed a photonic 
+structure in which she stacked 54 sub-mirrors as follows: the 
+first sub-mirror consisted of 2.5 periods and tuned it to 
+$\lambda_{1}=700$ nm; the following sub-mirrors were tuned to the 
+wavelengths $\lambda_{j}$ according to the sequence $\lambda_{j+1} 
++ \lambda_{j}=2+j$ with 4 periods for each of the following 
+periods.
+\notaL{This cannot be correct. Please check}. Furthermore, Estrada-Wiese et al. \cite{DelRio2018}
 developed a method that combines three stochastic optimization algorithms together with
 a  narrow space search methodology to obtain a customized and optimized
 PC configuration.
@@ -514,7 +506,7 @@ where $K$ is Bloch's vector, $\bm M$ the transfer matrix of a single
 period of thickness $D$ \cite{Mochan1987, Mochan1988,
   Perez2018}. \notaL{Tr was already defined and the reference to the
   equation is wrong:  denotes the trace
-and $M$ is the matrix given by Eq. \ref{MsBloch}}. Thus,
+and $M$ is the matrix given by Eq. \ref{MsBloch}}. \notaV{Entendido, gracias} Thus,
 whenever $\left\vert\text {Tr} \left(M \right) \right\vert>2$
 electromagnetic energy cannot propagate in the periodic system and we
 expect a high reflectance for a finite system made of a finite number
@@ -531,34 +523,39 @@ assigned to each submirrors with a PBG center within different
 spectral regions: we used a single period for
 $\lambda_{D}<500$ nm, two periods for $500 <\lambda_ {D} < 650$ nm
 and three periods for $650<\lambda_ {D}<800$ nm.  and for
-$\lambda_{D}>800$ nm, the number of periods was variable.\notaL{No se
-  entiende. Los números uno, dos, tres ¿se sacaron de la manga? ¿se
-  optimizaron? Para <800, ¿de dónde se sacó el número de periodos?}
-In both
-designs, the optimal overlap of two consecutive PBGs was obtained that
-maximized reflectance.\notaL{No quisiste decir average reflectance
-  $\braket{R}$?. Si sí, en qué rango promediaste?}
+$\lambda_{D} \geq 800$ nm, the number of periods was variable.
+\notaL{No se entiende. Los números uno, dos, tres ¿se sacaron de la manga? ¿se optimizaron? Para <800, ¿de dónde se sacó el número de periodos?}
+\notaV{Los números de periodos uno, dos, tres, los eleg\'{i} para 
+	que la estructura tenga pocos periodos en la region visible. 
+	Adem\'{a}s, del c\'{a}lculo de las Trazas y reflectancias de 
+	los subespejos individuales sintonizados de 1000 a 2500 nm, 
+	tambi\'{e}n tienen una regi\'{o}n de propagaci\'{o}n prohibida 
+	en el intervalo de 400 a 900 y la reflectancia es mayor al 
+	80\%. Esto se puede observar en la Fig. SITrazasyRefSE.pdf}
+In both designs, the optimal overlap of two consecutive PBGs was obtained that maximized reflectance.
+\notaL{No quisiste decir average reflectance $\braket{R}$?. Si sí, en qué rango promediaste?} \notaV{Si, se promedi\'{o} en el siguiente rango}
 Reflectance spectra were calculated for
 $400\text{nm}\le \lambda\le 3000\text{nm}$ and for $0^\circ\le\theta\le90^\circ$.
 
-Table \ref{tab:table2} shows the number of periods of each sub-mirror
-($Np_{se}$),\notaL{Está difícil esta notación. ¿De dónde vienen la s y
-  la e. $Np_{se}$ parece el producto de $N$ con $p_{se}$. ¿De dónde la
-  p?} the total number of stacked sub mirrors ($N_{se}$)
-\notaL{El encabezado de la tabla está mal}, the
+Table \ref{tab:table2} shows the number of periods of each sub-mirror ($p$),
+\notaL{Está difícil esta notación. ¿De dónde vienen la s y
+  la e. $Np_{se}$ parece el producto de $N$ con $p_{se}$. ¿De dónde la p?} \notaV{Lo cambi\'{o} por $p$ de periods y $N$ de N\'{u}mero total de periodos}
+the total number of stacked sub mirrors ($N_{se}$)
+\notaL{El encabezado de la tabla está mal} \notaV{Corregido}, the
 thickness of the structure, the optimal overlap of two consecutive
 PBGs and the average reflectance. The first block corresponds to
 sub-mirrors with a constant number of periods, while the second block
 corresponds to sub-mirrors with a variable number of periods according
-to the design wavelength.\notaL{No entiendo nada: qué dejaste fijo y
-  qué permitiste variar para optimizar en cada bloque de la tabla?}
+to the design wavelength. \notaL{No entiendo nada: qué dejaste 
+	fijo y qué permitiste variar para optimizar en cada bloque de la tabla?}
+\notaV{En el primer bloque \'{u}nicamente se optimiz\'{o} el traslape de dos PBGs consecutivos. En el segundo bloque, se optimizaron el n\'{u}mero de periodos (de 4 a 10 periodos) de los subespejos sintonizados a $\lambda_{D} \geq 800$ nm y el traslape de dos PBGs consecutivas.} 
 \begin{table}[htbp]
   \begin{center}
     \caption{Parameters that maximize $\braket{R}$ for  stacked sub-mirrors.}
     \label{tab:table2}
     \begin{tabular}{|c|c|c|c|c|}
       \hline % <-- Toprule here
-      \textbf{$Np_{se}$}&{\textbf{$Np_{se}$}} &\textbf{Thickness}&\textbf{Overlap}&$\braket{R}$\\
+      \textbf{$p$}&{\textbf{$N$}} &\textbf{Thickness}&\textbf{Overlap}&$\braket{R}$\\
 			&&($\mu$m)& \textbf{PBG $\%$}&$\%$\\
       \hline
       1&98&43.2&95&91.0\\
@@ -577,8 +574,8 @@ reflectance is in the second block, with an optimal overlap between
 consecutive PBGs of $78\%$, a thickness of
 41.5 $\mu$m, and  average reflectance $\braket{0.953}$. It is made up
 of 18 sub-mirrors tuned to the following wavelengths
-400, 460, 510, 570, 640, 720,810,910, 1020, 1150, 1290, 1450, 1630,
-1830, 2060, 2320, 2610, and 2860 nm.
+400, 460, 510, 570, 640, 720, 810, 910, 1020, 1150, 1290, 1450, 
+1630, 1830, 2060, 2320, 2610, and 2860 nm.
 We synthesized this structure and designated it {\em sample $S_3$}.
 Its calculated and measured
 reflectance spectra are shown in Fig. \ref{Fig3}.
@@ -608,8 +605,9 @@ calculated and measured reflectance for the structure $S_3$ at several angles of
 incidence. Although, the quasi omnidirectional wavelength range of the synthesized
 structure is slightly smaller than the calculated one, from 950 to 2750 nm, the measured
 PBG is almost twice as wide as a recently reported PS chirped
-structure \cite{Chavez2020}. \notaL{Por qué comparamos con ésta? ¿Era
-  la mejor que había? Habría que decirlo}
+structure \cite{Chavez2020}. \notaL{Por qué comparamos con ésta? 
+	¿Era la mejor que había? Habría que decirlo}
+\notaV{S\'{i}, es la estructura, a base de SP, que tiene el mayor ancho OD} 
 
 Finally, Table \ref{tab:table3} shows some porous silicon based OD mirrors designed to operate in the NIR
 region and the width of the omnidirectional band gaps are compared
