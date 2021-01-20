@@ -61,7 +61,7 @@ wavelength and angular range for different porosity contrasts. Optimization is
 performed to maximize the reflectance for minimum  thickness of the structure in the
 visible (Vis) and near infrarred (NIR) regions of the electromagnetic spectrum. We design the
 mirrors  \notaL{No entiendo para qué haber cambiado el
-  modo de activo a pasivo; es mucho mejor el activo.} 
+  modo de activo a pasivo; es mucho mejor el activo.}
 \notaV{Cambie la oracion a voz activa} using \textit{chirped}-type structures and \textit{stacking}
 sub-mirrors. The chirped structures are found to be more suitable for the Vis range,
 while stacked sub-mirrors are found to be better for the NIR region. Design, fabrication
@@ -400,11 +400,11 @@ in Fig. \ref{Fig1}(c). The profiles $f_i$ are qualitatively
 similar. For example, for $\mathcal R_1$ the optimal photonic
 structures have a small number of periods tuned to the wavelengths where
 silicon has a large absorption, i.e.,  the first periods of the
-structure. 
-\notaV{replanteo la idea: "For $\mathcal R_2$ it is only necessary that the periods have an adequate ordering.}
-\notaL{No entendí qué hay que comentar en
-  este caso} 
-Due in $\mathcal R_2$, the absorption of porous silicon is negligible, the periods are distributed quasi-evenly.
+structure.
+As in $\mathcal R_2$ the absorption of porous silicon is negligible,
+the periods are distributed quasi-evenly. \notaL{Sigo sin
+  entender. ¿La absorción del silicio poroso depende de la muestra?
+  ¿Qué significa quasi-evenly? Quité el 'due', pues era mala redacción}
 
 \begin{figure}
   \label{Fig1}
@@ -430,12 +430,10 @@ experimental limitations, we restrict our results to the case of
 unpolarized light. In Fig. \ref{Fig2}(a), the calculated and measured
 reflectance corresponding to sample $S_1$ are compared from 350 to 1400 nm for different angles of
 incidence ($\theta=10^\circ$, $20^\circ$, $30^\circ$, $40^\circ$,
-$50^\circ$, and $60^\circ$). The spectra are qualitatively 
-similar, and for $\lambda>700$ nm and $10^\circ < \theta < 
-40^\circ$, they agree quantitatively, with a difference smaller 
+$50^\circ$, and $60^\circ$). The spectra are qualitatively
+similar, and for $\lambda>700$ nm and $10^\circ < \theta <
+40^\circ$, they agree quantitatively, with a difference smaller
 than $5\%$.
-\notaL{Yo no veo nada especial en 40 grados: and for
-$\theta > 40^\circ$ both spectra are qualitatively consistent} \notaV{De acuerdo. Se puede omitir}
 The
 measured reflectance is lower than the calculated one, more so at
 small wavelengths and large angles. This difference
@@ -479,20 +477,21 @@ centered at 1880 nm.
 
 Another class of techniques for designing good reflectors across a wide spectral range
 is to stack sub-mirrors tuned to different wavelengths chosen with
-different criteria. 
-\notaV{I rewrote this "For example, Agarwal et al. 
-	\cite{Agarwal2003} proposed to stack sub-mirrors as follows: 
-	tune the first sub-mirror to certain wavelength $\lambda_{1}$. 
-	Tune subsequent submirrors $j$ to wavelengths $\lambda_j$, 
-	chosen so that $\lambda_{j+1} - \lambda_{j}=2+j$."} 
-For example, Agarwal et al. \cite{Agarwal2003} proposed a photonic 
-structure in which she stacked 54 sub-mirrors as follows: the 
-first sub-mirror consisted of 2.5 periods and tuned it to 
-$\lambda_{1}=700$ nm; the following sub-mirrors were tuned to the 
-wavelengths $\lambda_{j}$ according to the sequence $\lambda_{j+1} 
-- \lambda_{j}=2+j$ (with its suitable units) with 4 periods for 
-each of the following periods. 
-\notaL{This cannot be correct. Please check}. Furthermore, Estrada-Wiese et al. \cite{DelRio2018}
+different criteria.
+For example, Agarwal et al. \cite{Agarwal2003} proposed a photonic
+structure in which 54 sub-mirrors were stacked as follows:\notaL{I
+  changed to passive to avoid the fact that Agarwal did the stacking} the
+first sub-mirror consisted of 2.5 periods \notaL{This means 5 layers?} tuned to
+$\lambda_{1}=700$ nm; the following sub-mirrors were tuned to
+wavelengths $\lambda_{j}$ according to the sequence $\lambda_{j+1}
+- \lambda_{j}=2+j$ (with its suitable units)\notaL{This is still
+  wrong and/or I don't understand. What are these suitable units? Why
+  the mistery? $j$ numbers
+  periods or sub-mirrors? Do you mean (2+j) nm, such as the sequence
+  700, $\lambda_2=700+2+2=704$, $\lambda_3=704+2+3=709\ldots$
+  $\lambda_{54}=700+2*53+54*55/2-1=2290$?} with 4 periods for
+each of the following periods.
+Furthermore, Estrada-Wiese et al. \cite{DelRio2018}
 developed a method that combines three stochastic optimization algorithms together with
 a  narrow space search methodology to obtain a customized and optimized
 PC configuration.
@@ -504,9 +503,7 @@ electromagnetic waves is described by the dispersion relation
 \end{equation}
 where $K$ is Bloch's vector, $\bm M$ the transfer matrix of a single
 period of thickness $D$ \cite{Mochan1987, Mochan1988,
-  Perez2018}. \notaL{Tr was already defined and the reference to the
-  equation is wrong:  denotes the trace
-and $M$ is the matrix given by Eq. \ref{MsBloch}}. \notaV{Entendido, gracias} Thus,
+  Perez2018}. Thus,
 whenever $\left\vert\text {Tr} \left(M \right) \right\vert>2$
 electromagnetic energy cannot propagate in the periodic system and we
 expect a high reflectance for a finite system made of a finite number
@@ -516,56 +513,53 @@ each made of a few periods of a periodic system such that its photonic band gap
 submirror. The number of periods of each sub-mirror is an
 important parameter. If it is too small, the sub-mirror would be
 partially transparent within the PBG. If it is too large, the
-resulting structure would be too thick. We followed two design
+resulting structure would be too thick. This is particularly important
+for submirrors tuned to shorter wavelengths, for which there is some
+absorption. We followed thus two design
 strategies: In the first, we considered sub-mirrors each with the same
-number of periods. In the second, a different number of periods was
-assigned to each submirrors with a PBG center within different
-spectral regions: we used a single period for
-$\lambda_{D}<500$ nm, two periods for $500 <\lambda_ {D} < 650$ nm
-and three periods for $650<\lambda_ {D}<800$ nm.  and for
-$\lambda_{D} \geq 800$ nm, the number of periods was variable.
-\notaL{No se entiende. Los números uno, dos, tres ¿se sacaron de la manga? ¿se optimizaron? Para <800, ¿de dónde se sacó el número de periodos?}
-\notaV{Los números de periodos uno, dos, tres, los eleg\'{i} para 
-	que la estructura tenga pocos periodos en la region visible. 
-	Adem\'{a}s, del c\'{a}lculo de las Trazas y reflectancias de 
-	los subespejos individuales sintonizados de 1000 a 2500 nm, 
-	tambi\'{e}n tienen una regi\'{o}n de propagaci\'{o}n prohibida 
-	en el intervalo de 400 a 900 y la reflectancia es mayor al 
-	80\%. Esto se puede observar en la Fig. SITrazasyRefSE.pdf} 
-\notaV{Tambi\'{e}n fue a prueba y error}
-In both designs, the optimal overlap of two consecutive PBGs was 
-obtained that maximizes the average reflectance $\braket{R}$.
-\notaL{No quisiste decir average reflectance $\braket{R}$?. Si sí, en qué rango promediaste?} \notaV{Si, se promedi\'{o} en el siguiente rango}
-Reflectance spectra were calculated for
-$400\text{nm}\le \lambda\le 3000\text{nm}$ and for $0^\circ\le\theta\le90^\circ$.
+number $p$ of periods. In the second, a different number of periods was
+assigned to each submirror according to the center of its PBG: we chose
+a single period for those submirrors $j$ tuned to
+$\lambda_{j}<500$ nm, two periods for $500 <\lambda_ {j} < 650$ nm,
+three periods for $650<\lambda_ {j}<800$ nm, and for
+$\lambda_{j} \geq 800$ nm the number of periods $p$ was varied between
+4 and 10. \notaL{¿Por qué no se optimizó $p$? Se podría optimizar para
+  cada subespejo?}
+In both designs, the degree of overlap of consecutive PBGs was
+taken as the parameter to be optimized in order to maximize
+the reflectance $\braket{R}$ averaged within the spectral and
+angular range $400\text{nm}\le
+\lambda\le 3000\text{nm}$ and for $0^\circ\le\theta\le90^\circ$.
 
-Table \ref{tab:table2} shows the number of periods of each sub-mirror ($p$),
-\notaL{Está difícil esta notación. ¿De dónde vienen la s y
-  la e. $Np_{se}$ parece el producto de $N$ con $p_{se}$. ¿De dónde la p?} \notaV{Lo cambi\'{o} por $p$ de periods y $N$ de N\'{u}mero total de periodos}
-the total number of stacked sub mirrors ($N$)
-\notaL{El encabezado de la tabla está mal} \notaV{Corregido}, the
-thickness of the structure, the optimal overlap of two consecutive
-PBGs and the average reflectance. The first block corresponds to
-sub-mirrors with a constant number of periods, while the second block
-corresponds to sub-mirrors with a variable number of periods according
-to the design wavelength. \notaL{No entiendo nada: qué dejaste 
-	fijo y qué permitiste variar para optimizar en cada bloque de la tabla?}
-\notaV{En el primer bloque \'{u}nicamente se optimiz\'{o} el traslape de dos PBGs consecutivos. En el segundo bloque, se optimizaron el n\'{u}mero de periodos (de 4 a 10 periodos) de los subespejos sintonizados a $\lambda_{D} \geq 800$ nm y el traslape de dos PBGs consecutivas.} 
+Table \ref{tab:table2} shows the optimized values of the average
+reflectance $\braket{R}$ for
+different choices of the number of periods $p$ of each sub-mirror, as
+discussed above, including the resulting number $N_m$ of stacked sub
+mirrors, the thickness $d$ of the structure, and the optimal
+overlap of consecutive PBGs. The first and second blocks correspond to
+the first and second strategies discussed above.
 \begin{table}[htbp]
   \begin{center}
-    \caption{Parameters that maximize $\braket{R}$ for  stacked sub-mirrors.}
+    \caption{Total number $N_m$ of stacked submirrors, thickness $d$,
+      overlap between consecutive PBG and average reflectance
+      $\braket{R}$ for optimized structures designed with a
+      number $p$ of periods per submirror (first block) or a number $p$
+      of periods for those submirrors tuned to wavelengths
+      $\lambda_j\geq 800$nm (second block, see text), for different
+      values of $p$. The parameters corresponding to the best design
+      are typeset in bold.}
     \label{tab:table2}
-    \begin{tabular}{|c|c|c|c|c|}
-      \hline % <-- Toprule here
-      \textbf{$p$}&{\textbf{$N$}} &\textbf{Thickness}&\textbf{Overlap}&$\braket{R}$\\
-			&&($\mu$m)& \textbf{PBG $\%$}&$\%$\\
+    \begin{tabular}{ccccc}
+      $p$&$N_m$&$d (\mu\text{m})$&\% overlap&$\braket{R}$\\
+      \hline
       \hline
       1&98&43.2&95&91.0\\
       3&31&42.5&81&91.8\\
       5&17&41.9&68&92.0\\
       \hline
-      4&25&38.7&74&92.3\\\textcolor{red}{6}&\textcolor{red}{18}&\textcolor{red}{41.5} &\textcolor{red}{78} & \textcolor{red}{95.35}\\
-      10&13&45.4&56&95.34\\
+      4&25&38.7&74&92.3\\
+      \bf 6&\bf 18&\bf 41.5&\bf 78&\bf 95.4\\
+      10&13&45.4&56&95.3\\
       \hline
     \end{tabular}
   \end{center}
@@ -574,9 +568,9 @@ to the design wavelength. \notaL{No entiendo nada: qué dejaste
 According to table \ref{tab:table2}, the structure that has the highest
 reflectance is in the second block, with an optimal overlap between
 consecutive PBGs of $78\%$, a thickness of
-41.5 $\mu$m, and  average reflectance $\braket{0.953}$. It is made up
-of 18 sub-mirrors tuned to the following wavelengths
-400, 460, 510, 570, 640, 720, 810, 910, 1020, 1150, 1290, 1450, 
+41.5 $\mu$m, and an average reflectance $\braket{0.954}$. It is made up
+of 18 sub-mirrors tuned to the wavelengths
+400, 460, 510, 570, 640, 720, 810, 910, 1020, 1150, 1290, 1450,
 1630, 1830, 2060, 2320, 2610, and 2860 nm.
 We synthesized this structure and designated it {\em sample $S_3$}.
 Its calculated and measured
@@ -604,16 +598,14 @@ wavelengths the reflectance decreases and has oscillations, which are attributed
 greater penetration of the electromagnetic field within the structure, as shown by
 Puente-D\'{\i}az, et al. \cite{Puente2020}. In Fig. \ref{Fig3}(b) we compare the
 calculated and measured reflectance for the structure $S_3$ at several angles of
-incidence. Although, the quasi omnidirectional wavelength range of 
-the synthesized structure is slightly smaller than the calculated 
-one, from 950 to 2750 nm, the measured PBG is almost twice as wide 
-as a recently reported PS chirped structure \cite{Chavez2020}, his 
-structure has the largest reported OD width.. 
-\notaL{Por qué comparamos con ésta? 
-	¿Era la mejor que había? Habría que decirlo}
-\notaV{S\'{i}, es la estructura, a base de SP, que tiene el mayor ancho OD} 
+incidence. Although, the quasi omnidirectional wavelength range of
+the synthesized structure, from 950 to 2750 nm, is slightly smaller than the calculated
+one, the measured PBG is almost twice as wide
+as a recently reported PS chirped structure \cite{Chavez2020}, which
+has the largest previously reported OD width.
 
-Finally, Table \ref{tab:table3} shows some porous silicon based OD mirrors designed to operate in the NIR
+Finally, Table \ref{tab:table3} shows some porous silicon based OD
+mirrors designed to operate in the NIRy
 region and the width of the omnidirectional band gaps are compared
 with those of the structures
 analyzed in the present study. The table reveals that the porous silicon based
