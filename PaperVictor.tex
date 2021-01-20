@@ -230,8 +230,8 @@ has been reported to adequately reproduce the PS optical parameters
 \cite{Giusseppe2011,Pap2006,Estrada2018}.
 
 \notaL{Creo que no se ha explicado el proceso de diseño. No sé para
-  qué damos tanto detalle sobre cómo se calculó, dado que todo está en
-  la referencia.}
+  qué damos tanto detalle sobre cómo se calculó, dado que todo está en la referencia.}
+\notaV{El proceso de diseño se explica en la secci\'{o}n de discusi\'{o}n y \}resultados}
 
 \section{Experimental details}\label{s:exp}
 
@@ -484,14 +484,14 @@ different criteria.
 	\cite{Agarwal2003} proposed to stack sub-mirrors as follows: 
 	tune the first sub-mirror to certain wavelength $\lambda_{1}$. 
 	Tune subsequent submirrors $j$ to wavelengths $\lambda_j$, 
-	chosen so that $\lambda_{j+1} + \lambda_{j}=2+j$."} 
+	chosen so that $\lambda_{j+1} - \lambda_{j}=2+j$."} 
 For example, Agarwal et al. \cite{Agarwal2003} proposed a photonic 
 structure in which she stacked 54 sub-mirrors as follows: the 
 first sub-mirror consisted of 2.5 periods and tuned it to 
 $\lambda_{1}=700$ nm; the following sub-mirrors were tuned to the 
 wavelengths $\lambda_{j}$ according to the sequence $\lambda_{j+1} 
-+ \lambda_{j}=2+j$ with 4 periods for each of the following 
-periods.
+- \lambda_{j}=2+j$ (with its suitable units) with 4 periods for 
+each of the following periods. 
 \notaL{This cannot be correct. Please check}. Furthermore, Estrada-Wiese et al. \cite{DelRio2018}
 developed a method that combines three stochastic optimization algorithms together with
 a  narrow space search methodology to obtain a customized and optimized
@@ -531,8 +531,10 @@ $\lambda_{D} \geq 800$ nm, the number of periods was variable.
 	los subespejos individuales sintonizados de 1000 a 2500 nm, 
 	tambi\'{e}n tienen una regi\'{o}n de propagaci\'{o}n prohibida 
 	en el intervalo de 400 a 900 y la reflectancia es mayor al 
-	80\%. Esto se puede observar en la Fig. SITrazasyRefSE.pdf}
-In both designs, the optimal overlap of two consecutive PBGs was obtained that maximized reflectance.
+	80\%. Esto se puede observar en la Fig. SITrazasyRefSE.pdf} 
+\notaV{Tambi\'{e}n fue a prueba y error}
+In both designs, the optimal overlap of two consecutive PBGs was 
+obtained that maximizes the average reflectance $\braket{R}$.
 \notaL{No quisiste decir average reflectance $\braket{R}$?. Si sí, en qué rango promediaste?} \notaV{Si, se promedi\'{o} en el siguiente rango}
 Reflectance spectra were calculated for
 $400\text{nm}\le \lambda\le 3000\text{nm}$ and for $0^\circ\le\theta\le90^\circ$.
@@ -540,7 +542,7 @@ $400\text{nm}\le \lambda\le 3000\text{nm}$ and for $0^\circ\le\theta\le90^\circ$
 Table \ref{tab:table2} shows the number of periods of each sub-mirror ($p$),
 \notaL{Está difícil esta notación. ¿De dónde vienen la s y
   la e. $Np_{se}$ parece el producto de $N$ con $p_{se}$. ¿De dónde la p?} \notaV{Lo cambi\'{o} por $p$ de periods y $N$ de N\'{u}mero total de periodos}
-the total number of stacked sub mirrors ($N_{se}$)
+the total number of stacked sub mirrors ($N$)
 \notaL{El encabezado de la tabla está mal} \notaV{Corregido}, the
 thickness of the structure, the optimal overlap of two consecutive
 PBGs and the average reflectance. The first block corresponds to
@@ -602,10 +604,12 @@ wavelengths the reflectance decreases and has oscillations, which are attributed
 greater penetration of the electromagnetic field within the structure, as shown by
 Puente-D\'{\i}az, et al. \cite{Puente2020}. In Fig. \ref{Fig3}(b) we compare the
 calculated and measured reflectance for the structure $S_3$ at several angles of
-incidence. Although, the quasi omnidirectional wavelength range of the synthesized
-structure is slightly smaller than the calculated one, from 950 to 2750 nm, the measured
-PBG is almost twice as wide as a recently reported PS chirped
-structure \cite{Chavez2020}. \notaL{Por qué comparamos con ésta? 
+incidence. Although, the quasi omnidirectional wavelength range of 
+the synthesized structure is slightly smaller than the calculated 
+one, from 950 to 2750 nm, the measured PBG is almost twice as wide 
+as a recently reported PS chirped structure \cite{Chavez2020}, his 
+structure has the largest reported OD width.. 
+\notaL{Por qué comparamos con ésta? 
 	¿Era la mejor que había? Habría que decirlo}
 \notaV{S\'{i}, es la estructura, a base de SP, que tiene el mayor ancho OD} 
 
