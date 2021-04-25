@@ -7,21 +7,21 @@ Please find enclosed a revised version of our manuscript OM-D-21-00419
 entitled /Optimization of wide-band quasi-omnidirectional 1-D photonic
 structures/. In the following we discuss the reviewer's remarks.
 * Reviewer #2:
-  - \emph{First of all, I would like to commend this work. The article
+  - @@latex:\emph{First of all, I would like to commend this work. The article
     overall is very interesting, it contains a good amount of valuable
     information, a detailed description of the methods used, and
     convincing results from both calculations and experiments. The
     body of the paper is for the most part clear and complete, and I
-    would recommend it for publication,}
+    would recommend it for publication,}@@
     - We are grateful for the reviewers opinion.
-  - \emph{as soon as some minor corrections are performed.}
-  - \emph{In particular, there seems to be an issue with the labeling
+  - /as soon as some minor corrections are performed./
+  - @@latex:\emph{In particular, there seems to be an issue with the labeling
     of figures and tables: the numbering in the text does not match
-    the notations in the figure and table captions.}
+    the notations in the figure and table captions.}@@
     - We are sorry for this confusion which was due to misplaced
       ~\label~ statements in the tex source. We have made the
       corresponding corrections.
-  - \emph{Also, in the final paragraph of the results section you
+  - @@latex:\emph{Also, in the final paragraph of the results section you
     compare the qODB with the ODB of devices proposed by other papers
     (table 3). While it has been stated before that your results are
     specifically referring to a quasi-omnidirectional PBG, I suggest
@@ -32,7 +32,7 @@ structures/. In the following we discuss the reviewer's remarks.
     fact that the papers in question present different angular ranges
     in their evaluation of the omnidirectional bandgap, and therefore
     the comparison should take that into account for the sake of
-    transparency.}
+    transparency.}@@
     - We agree with the reviewer. In the discussion of Table 3 we
       now remind the reader that our band is not /omnidirectional/ but
       /quasi-omnidirectional/ and we included the angular range
