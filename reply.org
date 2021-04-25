@@ -1,0 +1,54 @@
+#+OPTIONS: toc:nil author:nil title:nil date:nil
+#+LATEX_HEADER: \usepackage{bm}\usepackage[left=1in,right=1in]{geometry}
+
+\noindent{Dear Maurizio Ferrari\\Handling Editor\\Optical Materials}
+
+Please find enclosed a revised version of our manuscript OM-D-21-00419
+entitled /Optimization of wide-band quasi-omnidirectional 1-D photonic
+structures/. In the following we discuss the reviewer's remarks.
+* Reviewer #2:
+  - \emph{First of all, I would like to commend this work. The article
+    overall is very interesting, it contains a good amount of valuable
+    information, a detailed description of the methods used, and
+    convincing results from both calculations and experiments. The
+    body of the paper is for the most part clear and complete, and I
+    would recommend it for publication,}
+    - We are grateful for the reviewers opinion.
+  - \emph{as soon as some minor corrections are performed.}
+  - \emph{In particular, there seems to be an issue with the labeling
+    of figures and tables: the numbering in the text does not match
+    the notations in the figure and table captions.}
+    - We are sorry for this confusion which was due to misplaced
+      ~\label~ statements in the tex source. We have made the
+      corresponding corrections.
+  - \emph{Also, in the final paragraph of the results section you
+    compare the qODB with the ODB of devices proposed by other papers
+    (table 3). While it has been stated before that your results are
+    specifically referring to a quasi-omnidirectional PBG, I suggest
+    pointing out explicitly one more time whether you are comparing a
+    quasi-omindirectional PBG of this paper to the actual
+    omnidirectional PBGs from literature, or you are considering just
+    the 0-60° qODW for all of the cited works. This is also due to the
+    fact that the papers in question present different angular ranges
+    in their evaluation of the omnidirectional bandgap, and therefore
+    the comparison should take that into account for the sake of
+    transparency.}
+    - We agree with the reviewer. In the discussion of Table 3 we
+      now remind the reader that our band is not /omnidirectional/ but
+      /quasi-omnidirectional/ and we included the angular range
+      reported in the corresponding references. *habría que hacerlo*.
+* In summary
+  - We have addressed all of the remarks and suggestions received from
+    the reviewer.
+  - Our manuscript presents different approaches to the design of
+    optimized wide-band omnidirectional mirrors, we fabricated and
+    characterized the corresponding structures and obtained mirrors
+    that compare favorably to others described in the literature.
+  - The reviewer commended this work and recommended its publication,
+    save for the issues which have been addressed in this revision.
+  - Thus we believe that the current version is appropriate for
+    publication in Optical Materials.
+
+\noindent Yours truly,
+
+\noindent Victor Castillo-Galalrdo
