@@ -36,7 +36,7 @@ structures/. In the following we discuss the reviewer's remarks.
     - We agree with the reviewer. In the discussion of Table 3 we
       now remind the reader that our band is not /omnidirectional/ but
       /quasi-omnidirectional/ and we included the angular range
-      reported in the corresponding references. *habría que hacerlo*.
+      reported in the corresponding references.
 * In summary
   - We have addressed all of the remarks and suggestions received from
     the reviewer.
