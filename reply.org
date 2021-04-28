@@ -40,6 +40,7 @@ structures/. In the following we discuss the reviewer's remarks.
 * In summary
   - We have addressed all of the remarks and suggestions received from
     the reviewer.
+  - We have highlighted in color the revisions to our manuscript.
   - Our manuscript presents different approaches to the design of
     optimized wide-band omnidirectional mirrors, we fabricated and
     characterized the corresponding structures and obtained mirrors
