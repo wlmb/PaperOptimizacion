@@ -1,6 +1,6 @@
 % !TeX spellcheck = en_US
 \documentclass[a4paper,fleqn]{cas-sc}
-\usepackage[numbers]{natbib}
+\usepackage[numbers,sort&compress]{natbib}
 %%%Author macros
 \def\tsc#1{\csdef{#1}{\textsc{\lowercase{#1}}\xspace}}
 \tsc{WGM}
@@ -10,11 +10,13 @@
 \tsc{BEC}
 \tsc{DE}
 %%%
+%\usepackage{cite}
 \usepackage{braket}
 \usepackage{bm}
 \usepackage{xcolor}
 \newcommand{\hl}[1]{{\color{blue}#1}}
 \begin{document}
+\bibliographystyle{unsrt}
 \let\WriteBookmarks\relax
 \def\floatpagepagefraction{1}
 \def\textpagefraction{.001}
@@ -66,36 +68,21 @@
 \fntext[fn1]{On sabatical leave at ICF-UNAM from CIICAP-UAEM}
 
 \begin{abstract}
-We have designed, optimized, fabricated and characterized highly
-reflective quasi-omnidirectional (angular range of $0-60^\circ$)
-multilayered structures with a wide spectral range. Two techniques,
-chirping (a continuous change in thicknesses) and stacking of
-Bragg-type sub-structures, have been used to enhance the
-reflectance with minimum thickness for a given pair of refractive
-indices. Numerical calculations were carried out employing the
-transfer matrix method and we optimized the design parameters to
-obtain maximal reflectance averaged over different spectral ranges
-for all angles. We fabricated some of the optimized structures with
-porous silicon dielectric multilayers with low refractive contrast
-and compared their measured  optical properties with the
-calculations. Two chirped structures with thicknesses 21.6 $\mu$m
-and 60.4 $\mu$m, resulting in quasi-omnidirectional mirrors with
-bandwidths of 360 nm and 1800 nm, centered at 1160 nm and 1925 nm
-respectively have been shown. In addition, we fabricated a stacked
-sub-Bragg mirror structure  with a quasi-omnidirectional bandwidth
-of 1800 nm centered at 1850 nm and a thickness of 41.5 $\mu$m,
-which is almost two third (in thickness) of the chirped structure.
-Thus, our techniques allowed us to obtain relatively thin
+We design, optimize, fabricate, and characterize highly
+reflective quasi-omnidirectional multilayered structures with a wide
+angular and spectral range. We consider chirped structures with layers
+of gradually varying thicknesses and structures made by stacking
+Bragg-type sub-structures, and we maximized their numerically calculated
+reflectance averaged over different spectral ranges keeping a minimum
+thickness for given pairs of refractive indices. We fabricated some of
+these structures with porous silicon with a low refractive contrast
+between adjacent layers,
+and compared their measured  optical properties to the theoretical
+results and to previous works. We obtained relatively thin
 quasi-omnidirectional mirrors with wide bands over different
-wavelength ranges. Our analysis techniques can be used for the
-optimization of the reflectance not only in multilayered PS
-systems  with different refractive index contrasts but also for
-systems with other types of materials with low refractive index
-contrast. The present study could also be useful for obtaining
-omnidirectional dielectric mirrors in large spectral regions using
-different materials,  flat focusing reflectors, thermal regulators,
-or, if defects are included, as filters or remote
-chemical/biosensors with a wide angular independent response.
+wavelength ranges that compare favorably to others reported in the
+literature.
+
 \end{abstract}
 
 %\begin{graphicalabstract}
@@ -151,12 +138,12 @@ applications in optoelectronics, optical telecommunications and computing,
 laser technology \cite{Lopez2003,Masaya2010}, and radiative cooling applications
 \cite{Kumar2020}. The simplest 1D-PC is composed of a finite number
 of periodically alternating
-layers of high $n_{H}$ and low $n_{L}$ refractive indices, with
-corresponding thicknesses $d_H$ and $d_L$ chosen so that their optical
+layers of high $n_h$ and low $n_l$ refractive indices, with
+corresponding thicknesses $d_h$ and $d_l$ chosen so that their optical
 thicknesses corresponds to a quarter of a wavelength
-$n_{H}d_{H}=n_{L}d_{L}=\lambda_{0}/4$ at a nominal
+$n_hd_h=n_ld_l=\lambda_{0}/4$ at a nominal
 wavelength $\lambda_{0}$. This yields a {\em Bragg mirror} (BM)
-which might have a large PBG including an omnidirectional gap if the contrast $n_H/n_L$
+which might have a large PBG including an omnidirectional gap if the contrast $n_h/n_l$
 and the number of periods are large enough. Mirrors with high
 reflectance within a wider frequency range may be engineered by
 using different nominal wavelengths for different layers.
@@ -199,7 +186,8 @@ application of PS PC's, they have also been widely used as chemical
 sensors \cite{Giusseppe2011,Agarwal2018}, waveguides \cite{Hussel1997} and
 for photoluminescence control \cite{Antunez2014}. Recently, the study of
 chirped multilayer structures has
-increased due to their possible application as flat focusing mirrors \cite{Wu2021,Kozar2017,Cheng2018}.
+increased due to their possible application as flat focusing mirrors
+\cite{Wu2021,Kozar2017,Cheng2018}.
 PS based dielectric optical filters, {\em quasi}-ODM's and ODM's have
 been extensively studied in different
 regions of the electromagnetic spectrum, such as the ultraviolet (UV)
@@ -498,7 +486,7 @@ the structure has a quasi-ODB from 980 and
     angles of incidence $\theta=10^\circ$, $20^\circ$, $30^\circ$,
     $40^\circ$, $50^\circ$, and $60^\circ$ for structure $S_1$
     (panel a)  and $S_2$ (panel b). The gray band indicates the
-    region where the reflectance is greater than  $0.90$,
+    region where the reflectance is greater than  $90\%$,
     corresponding to the quasi-ODB of the
     structure. Inset: photograph of the synthesized structure.}
   \label{Fig2}
@@ -607,7 +595,7 @@ the first and second strategies discussed above.
 According to Table \ref{tab:table2}, the structure that has the highest
 reflectance is in the second block, with an optimal overlap between
 consecutive PBGs of $78\%$, a thickness of
-41.5 $\mu$m, and an average reflectance $\braket{0.954}$. It is made up
+41.5 $\mu$m, and an average reflectance $\braket{R}=95.4\%$. It is made up
 of 18 sub-mirrors tuned to the wavelengths
 400, 460, 510, 570, 640, 720, 810, 910, 1020, 1150, 1290, 1450,
 1630, 1830, 2060, 2320, 2610, and 2860 nm.
@@ -624,7 +612,7 @@ reflectance spectra are shown in Fig. \ref{Fig3}.
                 $\theta$. (b) Measured and calculated reflectance spectra at several
                 angles of incidence $\theta=10^\circ$, $20^\circ$,
                 $30^\circ$, $40^\circ$, $50^\circ$, $60^\circ$. The gray band indicates
-                the region in which the reflectance is greater than $R>0.90$.  Inset shows a
+                the region in which the reflectance is greater than $R>90\%$.  Inset shows a
                 photograph with a top view of the synthesized structure.}
         \label{Fig3}
 \end{figure}
@@ -693,11 +681,12 @@ which are defined by instrumental constrictions.}
 
 \section{Conclusion}\label{s:conc}
 
-We have designed, optimized, fabricated and characterized highly
-reflective quasi-omnidirectional (angular range of $0-60^\circ$)
-multilayered structures with a wide
-spectral range. Two techniques, chirping (a continuous change in thicknesses) and
-stacking of Bragg-type sub-structures, have been used to enhance the
+We developed a formalism to design and optimize highly
+reflective quasi-omnidirectional multilayered mirrors with a wide
+spectral range. We considered two kinds of systems, chirped structures with a gradual
+change in layer thicknesses and
+stacked Bragg mirrors tuned so that their bandwidths overlap, and
+optimized their
 reflectance with minimum thickness for a given pair of refractive
 indices. Numerical calculations were
 carried out employing a stabilized transfer matrix method and we optimized the
@@ -709,16 +698,17 @@ dielectric multilayers with low refractive contrast and compared their measured 
 with the calculations. Two chirped structures
 with thicknesses 21.6 $\mu$m and 60.4 $\mu$m,
 resulting in quasi-omnidirectional mirrors with bandwidths of 360 nm and 1800 nm, centered
-at 1160 nm and 1925 nm respectively have been shown. In addition,
-we fabricated a stacked sub-Bragg mirror structure  with a
+at 1160 nm and 1925 nm respectively were shown. In addition,
+we fabricated a stacked structure  with a
 quasi-omnidirectional bandwidth of 1800 nm centered at 1850 nm and a
 thickness of 41.5 $\mu$m, which is almost two thirds as thick as the chirped structure.
 Thus, our techniques allowed us to obtain relatively thin
 quasi-omnidirectional mirrors with wide bands
-over different wavelength ranges.
-Our analysis techniques can
-be used for the optimization of the reflectance not only in multilayered PS systems with
-different refractive index contrasts but also for systems with other types of
+over different wavelength ranges that compare favorably to those in
+the literature.
+We believe that our analysis techniques can
+be used for the optimization of the reflectance not only in
+multilayered porous silicon systems but also for systems with other types of
 materials with low refractive index contrast. The present study could
 also be useful for obtaining omnidirectional dielectric mirrors in
 large spectral regions using different materials,  flat focusing
@@ -741,7 +731,6 @@ and ICF where he did this work.
 
 \printcredits
 
-\bibliographystyle{unsrt}
 \bibliography{Bibliografia}
 
 \end{document}
