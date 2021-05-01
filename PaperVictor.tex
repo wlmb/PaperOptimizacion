@@ -83,7 +83,7 @@ and 60.4 $\mu$m, resulting in quasi-omnidirectional mirrors with
 bandwidths of 360 nm and 1800 nm, centered at 1160 nm and 1925 nm
 respectively have been shown. In addition, we fabricated a stacked
 sub-Bragg mirror structure  with a quasi-omnidirectional bandwidth
-of 1800 nm (centered at 1850 nm) and a thickness of 41.5 $\mu$m,
+of 1800 nm centered at 1850 nm and a thickness of 41.5 $\mu$m,
 which is almost two third (in thickness) of the chirped structure.
 Thus, our techniques allowed us to obtain relatively thin
 quasi-omnidirectional mirrors with wide bands over different
@@ -200,7 +200,8 @@ sensors \cite{Giusseppe2011,Agarwal2018}, waveguides \cite{Hussel1997} and
 for photoluminescence control \cite{Antunez2014}. Recently, the study of
 chirped multilayer structures has
 increased due to their possible application as flat focusing mirrors \cite{Wu2021,Kozar2017,Cheng2018}.
-PS based dielectric optical filters, quasi-ODM's and ODM's have been extensively studied in different
+PS based dielectric optical filters, {\em quasi}-ODM's and ODM's have
+been extensively studied in different
 regions of the electromagnetic spectrum, such as the ultraviolet (UV)
 \cite{Jimenez2020}, visible \cite{Ariza2012}, and NIR \cite{Bruyant2003} regions.
 However, to obtain the desirable high index of refraction
@@ -348,7 +349,7 @@ gradually with the depth of the layer, according to
 where $\lambda_{\min }$ and $\lambda_{\max }$ are the minimum and
 maximum {\em design} wavelengths respectively, $N_p$ is the number of
 periods  in the structure, and $f(\xi)$ is a smooth function that
-goes from 0 to 1 as its argument goes from the surface ($\xi=0$) to the
+goes from 0 to 1 as its argument \hl{$\xi=j/(N_p-1)$} goes from the surface ($\xi=0$) to the
 substrate ($\xi=1)$. We only consider increasing functions $f$ due to
 the high absorption of PS in the ultraviolet region, which decreases in
 the visible and becomes negligible in the near infrared, so, that the first
@@ -384,7 +385,7 @@ spectral region $\mathcal R_1$ from 350 to
 $\lambda_{\min}$ as another parameter to be optimized while $\lambda_{\max}$
 was fixed at 1400 nm. For $\mathcal R_2$ we fixed both
 $\lambda_{\min}=850$ nm and $\lambda_{\min}=3000$ nm.
-In the first case, we decided to optimize $\lambda_{min}$ to
+In the first case, we decided to optimize $\lambda_{\min}$ to
 obtain the best design in the high absorption zone of the PS.
 Approximately $90\%$ of the solar radiation that reaches the
 earth's surface is contained in the spectral region
@@ -643,8 +644,8 @@ as a recently reported PS chirped structure \cite{Chavez2020}, which
 has the largest previously reported ODW.
 
 Finally, Table \ref{tab:table3} shows data from some porous
-silicon based ODM \hl{and quasi-ODM designed to operate in the NIR
-region and their (quasi) ODB's are compared with those of
+silicon based ODM's \hl{and quasi-ODM's designed to operate in the NIR
+region and their (quasi-) ODB's are compared with those of
 the structures analyzed in the present study. The quasi-ODW}
 of the structure $S_1$ results 20 nm wider than that reported by Bruyant,
 et al. \cite{Bruyant2003} and it is located closer to the visible range. Furthermore,
@@ -652,7 +653,7 @@ et al. \cite{Bruyant2003} and it is located closer to the visible range. Further
 synthesized by Estevez, et al. \cite{Estevez2009}; nevertheless, its width extends to 2750
 nm. In other words, $S_3$ has a quasi-ODW 3.55 times larger. Moreover, the
 ODW of the structure reported by Xifre-Perez, et al. \cite{Xifre2005} represents only 17.6
-\% of the \hl{quasi-ODW of our $S_2$ and $S_3$ structures}. Aditionally, the table
+\% of the \hl{quasi-ODW's of our $S_2$ and $S_3$ structures}. Aditionally, the table
 reveals that the porous silicon based
 structures $S_2$ and $S_3$ have the widest gap widths, 1.36 times greater than the
 largest reported work until now in the NIR region \cite{Wu2021}.
@@ -661,8 +662,9 @@ As compared to the previous studies
 opens the possibility of generating dielectric multilayered
 \hl{structures with large quasi-omnidirectional bands with pairs of
 materials that have a relatively low refractive index contrast. To be
-fair, we have to point out that the (quasi-) omnidirectional band widths of the
-structures compared above correspond to different angular ranges,
+fair, we have to remark that, as shown in Table \ref{tab:table3}, the
+(quasi-) omnidirectional band widths of the structures compared above
+correspond to different angular ranges,
 which are defined by instrumental constrictions.}
 
 \begin{table}
@@ -698,7 +700,7 @@ spectral range. Two techniques, chirping (a continuous change in thicknesses) an
 stacking of Bragg-type sub-structures, have been used to enhance the
 reflectance with minimum thickness for a given pair of refractive
 indices. Numerical calculations were
-carried out employing the transfer matrix method and we optimized the
+carried out employing a stabilized transfer matrix method and we optimized the
 design parameters to obtain maximal reflectance averaged over different spectral ranges for
 all angles.
 We fabricated some of the optimized structures with
