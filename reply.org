@@ -13,7 +13,7 @@ structures/. In the following we discuss the reviewer's remarks.
     convincing results from both calculations and experiments. The
     body of the paper is for the most part clear and complete, and I
     would recommend it for publication,}@@
-    - We are grateful for the reviewers opinion.
+    - We are grateful for the reviewer's opinion.
   - /as soon as some minor corrections are performed./
   - @@latex:\emph{In particular, there seems to be an issue with the labeling
     of figures and tables: the numbering in the text does not match
@@ -54,4 +54,4 @@ structures/. In the following we discuss the reviewer's remarks.
 
 \noindent Yours truly,
 
-\noindent Victor Castillo-Galalrdo
+\noindent Victor Castillo-Gallardo
