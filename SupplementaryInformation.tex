@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{braket}
 \usepackage{dcolumn}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -119,10 +120,11 @@ where T$\text{r}$ denotes the trace. \begin{figure}[tbph]
                 The multilayer system can be replaced by an
 		effective layer within which supports right and left
                 moving Bloch waves with wavevectors $\bm K^\pm=(\bm Q,
-                K^\pm)$ and electric and magnetic field amplitudes
+                \pm K)$ and electric and magnetic field amplitudes
                 $\bm E_\beta^\pm$ and $\bm H_\beta$. The projection of
               the wavevector unto the $xy$ plane is $\bm Q$ for all
-              the waves, due to translational symmetry.}
+              the waves, due to translational symmetry and $K$ is
+              obtained from Eq. \eqref{dispersion}.}
 	\label{Fig1}
 \end{figure}
 
@@ -131,25 +133,26 @@ and placed on a substrate. Even for the extreme $P=1$  case, the
 optical properties of this system can be obtained by considering an incoming
 wave from the ambient, a wave reflected to the environment, a wave
 transmitted to the substrate, and two Bloch waves within the structure, one
-moving up and other down, as show in Fig. \ref{Fig1}(b).
-
-Hence, the continuity of $E_{\Vert }$ and $H_{\Vert }$ will produce two
+moving rightwards and other leftwards, as show in Fig. \ref{Fig1}(b). Hence, the
+continuity of $E_{\Vert }$ and $H_{\Vert }$ yields two
 equations at each interface, with which the four unknowns are obtained,
-namely $r$, $t$ and the amplitudes of two Bloch's waves. In a finite system,
+namely the reflection and transmission amplitudes $r$ and $t$, and the
+amplitudes of the two Bloch's waves. In a finite system,
 $K$ can be complex. Even in the presence of very little dissipation, Bloch's
-waves should decay as they propagate. Thus, the eigenvalue of ascending mode
-$\Lambda_{+}=e^{iKD}$ is identified as the one that obeys $|\Lambda_+|<1$, $%
-\text{Im}K>0$, adding a negligible amount of dissipation if necessary to
-avoid cases $|\Lambda_+|=1$.
+waves should decay as they propagate. Thus, the eigenvalue of the right-moving mode
+$\Lambda_{+}=e^{iKD}$ is identified as the one that obeys
+$|\Lambda_+|<1$,
+$\text{Im}\,K>0$, adding a negligible amount of dissipation if necessary to
+avoid the case $|\Lambda_+|=1$. Then, $\Lambda_-=1/\lambda_+$
 
-From the eigenvalues $\Lambda_{\pm }$ of the transfer matrix, we may obtain
-the corresponding eigenvectors $E_{\Vert }^{\pm }$ and $H_{\Vert }^{\pm }$
-from Eq. (\ref{Bloch}), and from them, the corresponding surfaces impedances
+From the eigenvalues $\Lambda_{\pm }$ of the transfer matrix, we obtain
+the corresponding eigenvectors $(E_{\Vert }^{\pm }, H_{\Vert }^{\pm
+})$, and from them, the corresponding surfaces impedances, given by
 \begin{equation}
 Z^{\pm }=-\frac{M_{12}}{M_{11}-\Lambda_{\pm }},  \label{Z+-}
 \end{equation}%
 where $M_{ij}$ with $i=1,2$ and $j=1,2$ denote the elements of the transfer
-matrix $M$. By writing the fields at $z_{0}$ and $z_{N}$ as a superposition
+matrix $\bm M$. By writing the fields at $z_{0}$ and $z_{N}$ as a superposition
 of the upward and downward propagating (or decaying) fields, $E_{\Vert
 }^{\pm }=Z^{\pm }H_{\Vert }^{\pm }$, we can relate the fields at $z_{N}$ to
 the fields at $z_{0}$ through a \emph{reconstructed} transfer matrix,
@@ -158,7 +161,7 @@ the fields at $z_{0}$ through a \emph{reconstructed} transfer matrix,
 E_{\Vert } \\
 H_{\Vert }%
 \end{pmatrix}%
-_{z_{N}}=\tilde{M}%
+_{z_{N}}=\tilde{\bm M}%
 \begin{pmatrix}
 E_{\Vert } \\
 H_{\Vert }%
@@ -167,14 +170,16 @@ _{z_{0}},  \label{tilMEH}
 \end{equation}%
 where
 \begin{equation}
-\tilde{M}=\frac{1}{Z^{+}-Z^{-}}%
+\tilde{\bm M}=\frac{1}{Z^{+}-Z^{-}}%
 \begin{pmatrix}
 Z^{+}e^{iKD}-Z^{-}e^{-iKD} & -2iZ^{+}Z^{-}\sin KD \\
 2i\sin KD & Z^{+}e^{-iKD}-Z^{-}e^{iKD}%
 \end{pmatrix}%
-.  \label{tilM}
+,\label{tilM}
 \end{equation}%
-Finally, the explicit expressions for the optical coefficients are:
+and its determinant is 1, even if numerical errors creep into the
+calculation of the original matrix $\bm M$.
+Finally, the explicit expressions for the optical coefficients are
 \begin{equation}
 r=\mp \frac{Z_{0}\tilde{M}_{11}+\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}_{21}-Z_{s}%
 	\tilde{M}_{22}}{Z_{0}\tilde{M}_{11}-\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}%
@@ -198,26 +203,34 @@ the case of TM polarization.
 
 As the porosity contrast of the periods increases, the thickness of the structure
 decreases and the average reflectance increases, as shown in table 1. For example,
-you could have structures with a thickness of 10 $\mu$m and their average
-reflectance greater than 90$\%$.
+you could have structures with a thickness of 10 $\mu$m with an average
+reflectance greater than $90\%$.
 
 \begin{table}[tbph]
-	\caption{ Design parameters obtained after the optimization of functions for maximum average reflectance and minimum thickness }
+	\caption{Optimized design parameters for different profile
+          function classes for different porosity contrasts and some
+          properties (number of periods, thickness and average
+          reflectance) of the resulting structures.}
 	\includegraphics[width=\textwidth]
 	{SITableOptimized.pdf}
 \end{table}
 
-The mapping of the calculated reflectance of the structures designed with the
-optimized parameters is shown in Fig. \ref{Fig2}. Here it is observed that all of
-them have a PBG in the near infrared (NIR) region of the electromagnetic spectrum, i. e.,
+The calculated reflectance of the optimized structures
+is shown in Fig. \ref{Fig2}. it is observed that they
+have an ODB in the near infrared (NIR) region of the electromagnetic spectrum, i. e.,
 structures designed from functions $f_{1}$ and $f_{3}$ with a porosity contrast of
-$30/76\%$ have the highest PBG localized from 970 to 1370 nm, these are shown in
-panels (a) and (c). \begin{figure}[tbph]
+$30/76\%$ have the widest ODB spanning from 970 to 1370 nm.
+
+\begin{figure}[tbph]
 	\begin{center}
 		\includegraphics[width=\textwidth]
 		{SIReflectanceVisNIR.pdf}
 	\end{center}
-	\caption{Calculated reflectance of the structures designed with the optimized parameters of $f_{1}$ (left), $f_{2}$ (center) and $f_{3}$ (right) and with the porosity contrasts of $30/76\%$ (upper panels) and $42/76\%$ (lower panels). The dotted lines limit the area of the PBG.}
+	\caption{Calculated reflectance of the optimized structures
+          with profile class $f_{1}$ (left), $f_{2}$
+          (center) and $f_{3}$ (right) and with the porosities
+          $30\%/76\%$ (upper panels) and $42\%/76\%$ (lower
+          panels). The dotted lines limit the area of the ODB.}
 	\label{Fig2}
 \end{figure}
 
@@ -225,46 +238,52 @@ panels (a) and (c). \begin{figure}[tbph]
 
 \section{Photonic structure with sub-mirrors stacking}
 
-Before showing the design of the structures formed by the stacking of sub-mirrors,
-the transfer matrix trace of individual mirrors formed by one period (Fig.
-\ref{Fig3}(a)) and six periods (Fig. \ref{Fig3}(b)) was calculated. The reflectance
-of each mirror with its respective periods was also calculated (Figs. \ref{Fig3}(c)
-and \ref{Fig3}(d)). Each mirror was designed to reflect a wavelength in the range of
-400-3000 nm and the illumination range was the same. Additionally, the
-$\text{Tr}|M|$ and $R(\lambda,\theta)$ were calculated for light with
-  TE
-polarization and $45^\circ$ of incidence. In Fig. \ref{Fig3}(d) it is shown that by using
-mirrors that have 6 periods and designed to reflect at wavelengths greater than 1000
-nm, they also reflect in a certain region of the visible spectrum. Then, to
-reinforce the reflection of the electromagnetic waves in the visible, it is enough
-to place a smaller number of periods. This is another reason for the increasing
-number of periods in the 400 to 800 nm region. \begin{figure}[tbph]
+We calclulated the trace of the transfer matrix of single Bragg mirrors formed by one period (Fig.
+\ref{Fig3}(a)) and six periods (Fig. \ref{Fig3}(b)), as well as their
+corresponding reflectance (Figs. \ref{Fig3}(c)
+and \ref{Fig3}(d)), as a function of the design wavelength
+$\lambda_{\text{dis}}$ and the wavelength of the illuminating light.
+$\text{Tr}\,\bm M$ and $R(\lambda,\theta)$ were calculated for
+TE polarized light incident at an angle of $45^\circ$.
+Fig. \ref{Fig3}(d) shows that a
+6-period mirror tuned to a  wavelength greater than 1000
+nm, may also reflect in a certain region of the visible spectrum. Then, to
+reinforce the reflection of the electromagnetic waves in the visible
+a smaller number of periods is enough. This is another reason for increasing
+number of periods in the 400 to 800 nm region.
+\begin{figure}[tbph]
 	\begin{center}
 		\includegraphics[width=\textwidth]
 		{SITrazasyRefSE.pdf}
 	\end{center}
-	\caption{Calculated transfer matrix trace and reflectance of individual mirrors using ((a) and (c)) one period  and ((b) and (d)) six periods, respectively. Each mirror was tuned to a wavelength between 400 and 3000 nm. The calculations were made in the visible and NIR region and at 45${{}^\circ}$ of incidence.}
+	\caption{Calculated trace of the transfer matrix (left) and
+          reflectance (right) of single Bragg mirrors one (top)
+          and six (bottom) periods as a function of the design
+          wavelength $\lambda_{\text{dis}}$ and the illumination
+          wavelength $\lambda_{\text{ilum}}$.
+          The calculations correspond to an incidence angle $\theta=45^\circ$.}
 	\label{Fig3}
 \end{figure}
 \newpage
 
-It is common to imagine that the stacking of the sub-mirrors is the following: that
-the PBG of the second mirror begins at the edge of the PBG of the first mirror, the
-third PBG that begins at the edge of the PBG of the second mirror, and so on until
-the desired interval is completed. With this configuration, the reflectance
-decreases at each intersection of the two PBGs. For example, Figs. \ref{Fig4}(a)
+One strategy to design a wide band mirror could be stacking of the
+sub-mirrors so that the leftmost edge of the band of one mirror begins
+at the rightmost of the band of the previous mirror. However, with this
+configuration, the reflectance
+decreases where these band edges meet. For example, Figs. \ref{Fig4}(a)
 and \ref{Fig4}(b) show the calculated $R(\lambda, \theta)$ for the structures formed
 by sub-mirrors that have one and six periods, respectively, using non-polarized
-light. In these cases, the calculations do not show a PBG, or quasi-PBG. For this
-reason, the $R_{Ave}(\lambda, \theta)$ was maximized through the percentage of
-overlap of the PBGs of two consecutive sub-mirrors. In Fig. \ref{Fig3}(b) of the main
+light. In these cases, the calculations do not show a ODM, or quasi-ODM. For this
+reason, we allowed succesive bands to overlap by some percentage
+chosen to optimize the average reflectance $\braket{R}$. In Fig. \ref{Fig3}(b) of the main
 article the results obtained at the end of the optimization process are shown. The
 calculated $R(\lambda, \theta)$ for the structures designed with 4 periods for each
-sub-mirror and using the pattern described in the main article are shown in Figs.
-\ref{Fig4}(c) and \ref{Fig4}(d) of this document, respectively. Here the overlap of
+sub-mirror and using the pattern described in the main article are
+shown in this document in Figs.
+\ref{Fig4}(c) and \ref{Fig4}(d), respectively. Here the overlap of
 the two consecutive PBGs was optimized, being $72\%$ for the first case and $78\%$
-for the last. Furthermore, the calculations indicate that the structures have a
-quasi-PBG.
+for the second. Furthermore, the calculations indicate that the structures have a
+quasi-ODB.
 
 \begin{figure}[tbph]
 	\begin{center}
