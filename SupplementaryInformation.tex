@@ -22,8 +22,8 @@
 
 	%\title{Thickness optimization in wide range quasi omnidirectional multilayer
 	% structures}
-	\title{Suplementary information: Thickness optimization in wide range quasi
-		omnidirectional 1-D photonic structures}
+	\title{Suplementary information: Optimization of wide-band
+          quasi-omnidirectional 1-D photonic structures}
 	\author[1,2,3]{Victor Castillo-Gallardo\thanks{email: {\tt
 				victor1\_1@hotmail.com}}}
 	\author[1,2,3]{Luis Eduardo Puente-Díaz}
@@ -49,7 +49,8 @@
 \section{Development of the transfer matrix}
 
 If you consider that the system only varies on the $z$ axis (as show in Fig.
-\ref{Fig1}(a)) , the transfer matrix is $M\left(z_{2},z_{1}\right) ${}{}a
+\ref{Fig1}(a)) , the transfer matrix is $M\left(z_{2},z_{1}\right) $
+is a
 2x2 matrix that relates the components of the electric field E$_{\parallel }$
 and the magnetic field H$_{\parallel }$ parallel to the $xy$ plane, and
 normal to the axis of the structure, evaluated at any two points $z_{2}$
@@ -68,7 +69,7 @@ H_{\Vert }%
 \right) _{z_{1}}.
 \end{equation*}%
 
-Many equivalent formulations have been proposed to obtain $M$ . For example, if you
+Many equivalent formulations have been proposed to obtain $M$. For example, if you
 have a complete multilayer system and it periodically replicates to form an artificial photonic crystal, then Bloch's theorem can be used to describe the normal
 modes of this crystal. According to Bloch's theorem, the modes of a periodic system
 may be written as a superposition of Bloch waves, each of which acquires a
@@ -93,11 +94,10 @@ _{z_{0}},  \label{Bloch}
 \end{equation}%
 where $D=z_{N}-z_{0}$ is the period, which corresponds to the actual
 thickness of the multilayered system, and $\pm K$ represents a 1D Bloch's
-vector corresponding to a wave that propagates along $z$-direction. Thus, $\Lambda _{\pm }=e^{\pm iKD}$ are
+vector corresponding to a wave that propagates along $z$-direction. Thus, $\Lambda_{\pm }=e^{\pm iKD}$ are
 the eigenvalues of transfer matrix $M$ and $E_{\Vert }^{\pm }$ and $H_{\Vert
 }^{\pm }$ are the corresponding eigenvectors. Notice that exactly $\det M=1$
-is used, so that the product of eigenvalues ought to be $\Lambda _{+}\Lambda
-_{-}=1$, and the dispersion relation of the Bloch modes may be obtained in
+is used, so that the product of eigenvalues ought to be $\Lambda_{+}\Lambda_{-}=1$, and the dispersion relation of the Bloch modes may be obtained in
 principle from
 \begin{equation}
 \cos KD=\frac{1}{2}\text{Tr}\,M  \label{dispersion}
@@ -136,15 +136,15 @@ equations at each interface, with which the four unknowns are obtained,
 namely $r$, $t$ and the amplitudes of two Bloch's waves. In a finite system,
 $K$ can be complex. Even in the presence of very little dissipation, Bloch's
 waves should decay as they propagate. Thus, the eigenvalue of ascending mode
-$\Lambda _{+}=e^{iKD}$ is identified as the one that obeys $|\Lambda +|<1$, $%
+$\Lambda_{+}=e^{iKD}$ is identified as the one that obeys $|\Lambda_+|<1$, $%
 \text{Im}K>0$, adding a negligible amount of dissipation if necessary to
-avoid cases $|\Lambda +|=1$.
+avoid cases $|\Lambda_+|=1$.
 
-From the eigenvalues $\Lambda _{\pm }$ of the transfer matrix, we may obtain
+From the eigenvalues $\Lambda_{\pm }$ of the transfer matrix, we may obtain
 the corresponding eigenvectors $E_{\Vert }^{\pm }$ and $H_{\Vert }^{\pm }$
 from Eq. (\ref{Bloch}), and from them, the corresponding surfaces impedances
 \begin{equation}
-Z^{\pm }=-\frac{M_{12}}{M_{11}-\Lambda _{\pm }},  \label{Z+-}
+Z^{\pm }=-\frac{M_{12}}{M_{11}-\Lambda_{\pm }},  \label{Z+-}
 \end{equation}%
 where $M_{ij}$ with $i=1,2$ and $j=1,2$ denote the elements of the transfer
 matrix $M$. By writing the fields at $z_{0}$ and $z_{N}$ as a superposition
@@ -184,7 +184,7 @@ t=\frac{2Z_{\alpha }}{Z_{0}\tilde{M}_{11}-\tilde{M}_{12}-Z_{0}Z_{s}\tilde{M}%
 	_{21}+Z_{s}\tilde{M}_{22}},  \label{tBloch}
 \end{equation}%
 where the upper sign $-$ in Eq. (\ref{rBloch}) and the subscript $\alpha =s$
-in Eq. (\ref{tBloch}) has been chosen for the case of TE polarization, while
+in Eq. (\ref{tBloch}) have been chosen for the case of TE polarization, while
 the lower sign $+$ and the subscript $\alpha =0$ correspond to TM
 polarization. As usual, the reflectance is given by $R=|r|^{2}$ and the
 transmittance by $T=\beta \left\vert t\right\vert ^{2}$ with $\beta
@@ -207,7 +207,7 @@ reflectance greater than 90$\%$.
 
 The mapping of the calculated reflectance of the structures designed with the
 optimized parameters is shown in Fig. \ref{Fig2}. Here it is observed that all of
-them have a PBG in the NIR region of the electromagnetic spectrum, i. e.,
+them have a PBG in the near infrared (NIR) region of the electromagnetic spectrum, i. e.,
 structures designed from functions $f_{1}$ and $f_{3}$ with a porosity contrast of
 $30/76\%$ have the highest PBG localized from 970 to 1370 nm, these are shown in
 panels (a) and (c). \begin{figure}[tbph]
@@ -228,8 +228,10 @@ the transfer matrix trace of individual mirrors formed by one period (Fig.
 \ref{Fig3}(a)) and six periods (Fig. \ref{Fig3}(b)) was calculated. The reflectance
 of each mirror with its respective periods was also calculated (Figs. \ref{Fig3}(c)
 and \ref{Fig3}(d)). Each mirror was designed to reflect a wavelength in the range of
-400-3000 nm and the illumination range was the same. Additionally, the T$r|\text{M}|$ and R$(\lambda,\theta)$ were calculated for light with TE
-polarization and 45${{}^\circ}$ of incidence. In Fig. 3d it is shown that by using
+400-3000 nm and the illumination range was the same. Additionally, the
+$\text{Tr}|M|$ and $R(\lambda,\theta)$ were calculated for light with
+  TE
+polarization and $45^\circ$ of incidence. In Fig. \ref{Fig3}(d) it is shown that by using
 mirrors that have 6 periods and designed to reflect at wavelengths greater than 1000
 nm, they also reflect in a certain region of the visible spectrum. Then, to
 reinforce the reflection of the electromagnetic waves in the visible, it is enough
@@ -248,14 +250,14 @@ It is common to imagine that the stacking of the sub-mirrors is the following: t
 the PBG of the second mirror begins at the edge of the PBG of the first mirror, the
 third PBG that begins at the edge of the PBG of the second mirror, and so on until
 the desired interval is completed. With this configuration, the reflectance
-decreases at each intersection of the two PBGs. For example, in Figs. \ref{Fig4}(a)
-and \ref{Fig4}(b) show the calculated R$(\lambda, \theta)$ for the structures formed
+decreases at each intersection of the two PBGs. For example, Figs. \ref{Fig4}(a)
+and \ref{Fig4}(b) show the calculated $R(\lambda, \theta)$ for the structures formed
 by sub-mirrors that have one and six periods, respectively, using non-polarized
 light. In these cases, the calculations do not show a PBG, or quasi-PBG. For this
-reason, the R$_{Ave}(\lambda, \theta)$ was maximized through the percentage of
-overlap of the PBGs of two consecutive sub-mirrors. In Fig. 3 (b) of the main
+reason, the $R_{Ave}(\lambda, \theta)$ was maximized through the percentage of
+overlap of the PBGs of two consecutive sub-mirrors. In Fig. \ref{Fig3}(b) of the main
 article the results obtained at the end of the optimization process are shown. The
-calculated R$(\lambda, \theta)$ for the structures designed with 4 periods for each
+calculated $R(\lambda, \theta)$ for the structures designed with 4 periods for each
 sub-mirror and using the pattern described in the main article are shown in Figs.
 \ref{Fig4}(c) and \ref{Fig4}(d) of this document, respectively. Here the overlap of
 the two consecutive PBGs was optimized, being $72\%$ for the first case and $78\%$
@@ -273,7 +275,8 @@ quasi-PBG.
 		sub-mirror has (a) one period and (b) six periods. Case II: optimized
 		overlap of consecutive PBGs and (c) each subsmirror has 4 periods with
 		$72\%$ overlap, and (d) proposed arrangement in the main article with 6
-		periods for $\lambda>800$ nm and $78\%$ overlap. The quasi-OD region is bounded by the dotted lines.
+		periods for $\lambda>800$ nm and $78\%$ overlap. The
+                quasi-OD region is bounded by the dashed lines.
 	}
 	\label{Fig4}
 \end{figure}
