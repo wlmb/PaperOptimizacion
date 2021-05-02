@@ -48,20 +48,20 @@
 
 \section{Development of the transfer matrix}
 
-If you consider that the system only varies on the $z$ axis (as show in Fig.
-\ref{Fig1}(a)) , the transfer matrix is $M\left(z_{2},z_{1}\right) $
+Consider a system that varies along  the $z$ axis only, as show in Fig.
+\ref{Fig1}(a). Its transfer matrix $\bm{M}(z_{2},z_{1})$
 is a
-2x2 matrix that relates the components of the electric field E$_{\parallel }$
-and the magnetic field H$_{\parallel }$ parallel to the $xy$ plane, and
+2x2 matrix that relates the components  $E_{\parallel }$ and
+$H_{\parallel }$ of the electric and magnetic fields parallel to the $xy$ plane and
 normal to the axis of the structure, evaluated at any two points $z_{2}$
-and $z_{1}$
+and $z_{1}$,
 \begin{equation*}
 \left(
 \begin{array}{c}
 E_{\Vert } \\
 H_{\Vert }%
 \end{array}%
-\right) _{z_{2}}=M\left( z_{2},z_{1}\right) \left(
+\right) _{z_{2}}=\bm M( z_{2},z_{1}) \left(
 \begin{array}{c}
 E_{\Vert } \\
 H_{\Vert }%
@@ -69,18 +69,18 @@ H_{\Vert }%
 \right) _{z_{1}}.
 \end{equation*}%
 
-Many equivalent formulations have been proposed to obtain $M$. For example, if you
-have a complete multilayer system and it periodically replicates to form an artificial photonic crystal, then Bloch's theorem can be used to describe the normal
-modes of this crystal. According to Bloch's theorem, the modes of a periodic system
-may be written as a superposition of Bloch waves, each of which acquires a
-\emph{phase factor} as it propagates from one period to the next. Therefore, each
-Bloch wave would obey
+Many equivalent formulations have been proposed to obtain $\bm M$. For
+a periodically
+replicated multilayered system, the transfer matrix may be constructed
+from the normal modes of the corresponding photonic crystal. These
+modes are described by Bloch's
+theorem, which reads in this case,
 \begin{equation}
 \begin{pmatrix}
 E_{\Vert }^{\pm } \\
 H_{\Vert }^{\pm }%
 \end{pmatrix}%
-_{z_{N}}=M%
+_{z_{N}}=\bm M%
 \begin{pmatrix}
 E_{\Vert }^{\pm } \\
 H_{\Vert }^{\pm }%
@@ -93,14 +93,14 @@ H_{\Vert }^{\pm }%
 _{z_{0}},  \label{Bloch}
 \end{equation}%
 where $D=z_{N}-z_{0}$ is the period, which corresponds to the actual
-thickness of the multilayered system, and $\pm K$ represents a 1D Bloch's
-vector corresponding to a wave that propagates along $z$-direction. Thus, $\Lambda_{\pm }=e^{\pm iKD}$ are
-the eigenvalues of transfer matrix $M$ and $E_{\Vert }^{\pm }$ and $H_{\Vert
-}^{\pm }$ are the corresponding eigenvectors. Notice that exactly $\det M=1$
-is used, so that the product of eigenvalues ought to be $\Lambda_{+}\Lambda_{-}=1$, and the dispersion relation of the Bloch modes may be obtained in
-principle from
+thickness of the multilayered system, and $\pm K$ is the 1D Bloch's
+vector describing the propagation along $z$. Thus, $\Lambda_{\pm }=e^{\pm iKD}$ are
+the eigenvalues of transfer matrix $\bm M$ and $E_{\Vert }^{\pm }$ and $H_{\Vert
+}^{\pm }$ are the corresponding eigenvectors. Notice that $\det M=1$  exactly,
+so the product of eigenvalues $\Lambda_{+}\Lambda_{-}=1$ and the
+dispersion relation of the Bloch modes becomes
 \begin{equation}
-\cos KD=\frac{1}{2}\text{Tr}\,M  \label{dispersion}
+\cos KD=\frac{1}{2}\text{Tr}\,\bm M  \label{dispersion}
 \end{equation}%
 where T$\text{r}$ denotes the trace. \begin{figure}[tbph]
 	\begin{center}
@@ -108,7 +108,7 @@ where T$\text{r}$ denotes the trace. \begin{figure}[tbph]
 		{SIF1Squeme1DPC.pdf}
 	\end{center}
 	\caption{(a) Chirped-type photonic structure formed by two alternating
-		materials a and b, with refractive indices $n_{a}$ and $n_{b}$, and their
+		materials $a$ and $b$, with refractive indices $n_{a}$ and $n_{b}$,
 		thickness $d_{a}$ and $d_{b}$ gradually increases according to the condition
 		of $1/4$ of the wavelength at wich $j$-th. period will be sintonized.
 		\textbf{E}$_{\protect\alpha }^{\protect\beta }$ and \textbf{H}$_{\protect%
@@ -124,8 +124,8 @@ where T$\text{r}$ denotes the trace. \begin{figure}[tbph]
 	\label{Fig1}
 \end{figure}
 
-Now, considering a finite system made of $P$ periods, with $PD$ thickness
-and placed on a substrate. For the extreme case of only $P=1$ period, the
+Now, consider a finite system made of $P$ periods, with thickness $PD$
+and placed on a substrate. Even for the extreme $P=1$  case, the
 optical properties of this system can be obtained by considering an incoming
 wave from the ambient, a wave reflected to the environment, a wave
 transmitted to the substrate, and two Bloch waves within the structure, one
