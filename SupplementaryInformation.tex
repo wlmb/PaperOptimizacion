@@ -70,6 +70,32 @@ H_{\Vert }%
 \right) _{z_{1}}.
 \end{equation*}%
 
+\begin{figure}[!ht]
+	\begin{center}
+		\includegraphics[width=\textwidth]
+		{SIF1Squeme1DPC.pdf}
+	\end{center}
+	\caption{(a) Chirped-type photonic structure formed by two alternating
+		materials $a$ and $b$, with refractive indices $n_{a}$ and $n_{b}$,
+		thickness $d_{a}$ and $d_{b}$ that increases gradually
+		according to some design scheme. We show schematically
+		the  incident and reflected electric and magnetic
+		fields, $\bm E_i$, $\bm H_i$,  $\bm E_r$, $\bm H_r$,
+		their wavevectors $\bm k_i$ and $\bm k_r$, the right
+		($+$) and left ($-$) moving fields within each layer
+		as well as their wavevectors $\bm k_\alpha^\pm$. (b)
+		The multilayer system can be replaced by an
+		effective layer within which supports right and left
+		moving Bloch waves with wavevectors $\bm K^\pm=(\bm Q,
+		\pm K)$ and electric and magnetic field amplitudes
+		$\bm E_\beta^\pm$ and $\bm H_\beta$. The projection of
+		the wavevector unto the $xy$ plane is $\bm Q$ for all
+		the waves, due to translational symmetry and $K$ is
+		obtained from Eq. \eqref{dispersion}.}
+	\label{Fig1}
+\end{figure}
+
+
 Many equivalent formulations have been proposed to obtain $\bm M$. For
 a periodically
 replicated multilayered system, the transfer matrix may be constructed
@@ -103,30 +129,7 @@ dispersion relation of the Bloch modes becomes
 \begin{equation}
 \cos KD=\frac{1}{2}\text{Tr}\,\bm M  \label{dispersion}
 \end{equation}%
-where T$\text{r}$ denotes the trace. \begin{figure}[tbph]
-	\begin{center}
-		\includegraphics[width=\textwidth]
-		{SIF1Squeme1DPC.pdf}
-	\end{center}
-	\caption{(a) Chirped-type photonic structure formed by two alternating
-		materials $a$ and $b$, with refractive indices $n_{a}$ and $n_{b}$,
-		thickness $d_{a}$ and $d_{b}$ that increases gradually
-                according to some design scheme. We show schematically
-                the  incident and reflected electric and magnetic
-                fields, $\bm E_i$, $\bm H_i$,  $\bm E_r$, $\bm H_r$,
-                their wavevectors $\bm k_i$ and $\bm k_r$, the right
-                ($+$) and left ($-$) moving fields within each layer
-                as well as their wavevectors $\bm k_\alpha^\pm$. (b)
-                The multilayer system can be replaced by an
-		effective layer within which supports right and left
-                moving Bloch waves with wavevectors $\bm K^\pm=(\bm Q,
-                \pm K)$ and electric and magnetic field amplitudes
-                $\bm E_\beta^\pm$ and $\bm H_\beta$. The projection of
-              the wavevector unto the $xy$ plane is $\bm Q$ for all
-              the waves, due to translational symmetry and $K$ is
-              obtained from Eq. \eqref{dispersion}.}
-	\label{Fig1}
-\end{figure}
+where T$\text{r}$ denotes the trace. 
 
 Now, consider a finite system made of $P$ periods, with thickness $PD$
 and placed on a substrate. Even for the extreme $P=1$  case, the
@@ -206,7 +209,7 @@ decreases and the average reflectance increases, as shown in table 1. For exampl
 you could have structures with a thickness of 10 $\mu$m with an average
 reflectance greater than $90\%$.
 
-\begin{table}[tbph]
+\begin{table}[!ht]
 	\caption{Optimized design parameters for different profile
           function classes for different porosity contrasts and some
           properties (number of periods, thickness and average
@@ -221,7 +224,7 @@ have an ODB in the near infrared (NIR) region of the electromagnetic spectrum, i
 structures designed from functions $f_{1}$ and $f_{3}$ with a porosity contrast of
 $30/76\%$ have the widest ODB spanning from 970 to 1370 nm.
 
-\begin{figure}[tbph]
+\begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[width=\textwidth]
 		{SIReflectanceVisNIR.pdf}
@@ -234,13 +237,11 @@ $30/76\%$ have the widest ODB spanning from 970 to 1370 nm.
 	\label{Fig2}
 \end{figure}
 
-\newpage
-
 \section{Photonic structure with sub-mirrors stacking}
 
 We calclulated the trace of the transfer matrix of single Bragg mirrors formed by one period (Fig.
-\ref{Fig3}(a)) and six periods (Fig. \ref{Fig3}(b)), as well as their
-corresponding reflectance (Figs. \ref{Fig3}(c)
+\ref{Fig3}(a)) and six periods (Fig. \ref{Fig3}(c)), as well as their
+corresponding reflectance (Figs. \ref{Fig3}(b)
 and \ref{Fig3}(d)), as a function of the design wavelength
 $\lambda_{\text{dis}}$ and the wavelength of the illuminating light.
 $\text{Tr}\,\bm M$ and $R(\lambda,\theta)$ were calculated for
@@ -249,22 +250,21 @@ Fig. \ref{Fig3}(d) shows that a
 6-period mirror tuned to a  wavelength greater than 1000
 nm, may also reflect in a certain region of the visible spectrum. Then, to
 reinforce the reflection of the electromagnetic waves in the visible
-a smaller number of periods is enough. This is another reason for increasing
+a smaller number of periods is enough. This is another reason for decreasing
 number of periods in the 400 to 800 nm region.
-\begin{figure}[tbph]
+\begin{figure}[!ht]
 	\begin{center}
 		\includegraphics[width=\textwidth]
 		{SITrazasyRefSE.pdf}
 	\end{center}
-	\caption{Calculated trace of the transfer matrix (left) and
-          reflectance (right) of single Bragg mirrors one (top)
-          and six (bottom) periods as a function of the design
+	\caption{Calculated trace of the transfer matrix (top) and
+          reflectance (bottom) of single Bragg mirrors one (left)
+          and six (right) periods as a function of the design
           wavelength $\lambda_{\text{dis}}$ and the illumination
           wavelength $\lambda_{\text{ilum}}$.
           The calculations correspond to an incidence angle $\theta=45^\circ$.}
 	\label{Fig3}
 \end{figure}
-\newpage
 
 One strategy to design a wide band mirror could be stacking of the
 sub-mirrors so that the leftmost edge of the band of one mirror begins
